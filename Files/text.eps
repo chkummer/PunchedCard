@@ -1,0 +1,74 @@
+% text.eps
+/Pos 0 def
+/singleCol
+ { 
+   /PosStr 2 string def
+   6.264 mul 6.264 sub 18.072 add 0 moveto
+   /Helvetica-Narrow findfont
+   8 scalefont
+   setfont
+   -1 14 rmoveto
+   currentpoint
+   (9) show
+   moveto
+   0 18 rmoveto
+   currentpoint
+   (8) show
+   moveto
+   0 18 rmoveto
+   currentpoint
+   (7) show
+   moveto
+   0 18 rmoveto
+   currentpoint
+   (6) show
+   moveto
+   0 18 rmoveto
+   currentpoint
+   (5) show
+   moveto
+   0 18 rmoveto
+   currentpoint
+   (4) show
+   moveto
+   0 18 rmoveto
+   currentpoint
+   (3) show
+   moveto
+   0 18 rmoveto
+   currentpoint
+   (2) show
+   moveto
+   0 18 rmoveto
+   currentpoint
+   (1) show
+   moveto
+   0 18 rmoveto
+   currentpoint
+   (0) show
+   moveto
+   0 -7 rmoveto
+   currentpoint
+   /Helvetica-Narrow findfont
+   4 scalefont
+   setfont
+   Pos PosStr cvs show
+   moveto
+   0 -162 rmoveto
+   Pos PosStr cvs show
+   } def
+
+/text
+ { /Pos 1 def
+   { 
+     Pos singleCol
+     /Pos Pos 1 add def
+     Pos 80 gt
+     { exit } if
+     } loop
+   } def
+
+20 40 translate
+text
+
+showpage
