@@ -1,0 +1,91 @@
+%!PS-Adobe-2.0 EPSF-1.2
+%%Title: offsetTestPage_A4.eps
+%%Creator: Christoph Kummer
+%%CreationDate: 16-Jan-2020
+%%Pages: 1
+%%DocumentFonts:
+%%BoundingBox: 0 0 595 842
+
+/rightshow
+  { dup stringwidth pop
+    neg 0 rmoveto
+    show } def
+
+/centreshow 
+  { /mystring exch def
+    mystring stringwidth pop -2 div 0 rmoveto 
+    mystring show } def 
+
+/Helvetica findfont
+36 scalefont setfont
+
+297.5 700 moveto
+(Offset Test Page) centreshow
+
+/Helvetica findfont
+14 scalefont setfont
+
+297.5 670 moveto
+(using absolute coords of the lasercutter) centreshow
+297.5 650 moveto
+(adjust the offset in the lasercutter software) centreshow
+
+200 600 moveto
+(Printer: ) rightshow
+(_________________________________) show
+
+200 560 moveto
+(Lasercutter: ) rightshow
+(_________________________________) show
+
+200 520 moveto
+(X: ) rightshow
+(_________________________________) show
+
+200 480 moveto
+(Y: ) rightshow
+(_________________________________) show
+
+0.5 setlinewidth
+0 1 0 setrgbcolor
+
+newpath
+0 0 moveto
+595 0 lineto
+595 842 lineto
+0 842 lineto
+closepath stroke
+
+1 0 0 setrgbcolor
+
+70 50 moveto
+0 40 rlineto stroke
+
+50 70 moveto
+40 0 rlineto stroke
+
+525 50 moveto
+0 40 rlineto stroke
+
+505 70 moveto
+40 0 rlineto stroke
+
+70 792 moveto
+0 -40 rlineto stroke
+
+50 772 moveto
+40 0 rlineto stroke
+
+525 792 moveto
+0 -40 rlineto stroke
+
+505 772 moveto
+40 0 rlineto stroke
+
+277.5 421 moveto
+40 0 rlineto stroke
+
+297.5 401 moveto
+0 40 rlineto stroke
+
+showpage
