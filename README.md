@@ -30,7 +30,7 @@ Standards:
 I try to align it using the lasercutter absolute coordinates and adjusting the offset in the lasercutter software (in this case [LightBurn](https://lightburnsoftware.com/)):
 ![screenshot of LightBurn lasercutter software](Fotos/PunchedCard_0002.png)
 
-Print the offsetTestPage to Paper place the paper in to the lasercutter using some sort of mechanical alignment:
+Print the [offsetTestPage](Files/offsetTestPage_A4.pdf) to Paper place the paper in to the lasercutter using some sort of mechanical alignment:
 ![place paper in the lasercutter](Fotos/PunchedCard_0003.jpg)
 
 Measure offset with a ruler. Adjust offset in the lasercutter software. Repeat test/measure/adjust until the cuts match the red crosses:
