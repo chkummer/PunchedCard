@@ -7,41 +7,50 @@
     mystring stringwidth pop -2 div 0 rmoveto 
     mystring show } def 
 
+/centrecompshow 
+  { /mystring exch def
+    gsave
+    0.7 1 scale
+    mystring stringwidth pop -2 div 0 rmoveto 
+    mystring show
+    grestore
+  } def 
+
 /singleCol
- { /PosStr 2 string def
-   /XPos Pos 6.264 mul 11.808 add def
+  { /PosStr 2 string def
+    /XPos Pos 6.264 mul 11.5 add def
 
-   /Helvetica-Narrow findfont
-   8 scalefont setfont
+    /Helvetica-Narrow findfont
+    8 scalefont setfont
 
-   XPos 14 moveto
-   (9) centreshow
-   XPos 32 moveto
-   (8) centreshow
-   XPos 50 moveto
-   (7) centreshow
-   XPos 68 moveto
-   (6) centreshow
-   XPos 86 moveto
-   (5) centreshow
-   XPos 104 moveto
-   (4) centreshow
-   XPos 122 moveto
-   (3) centreshow
-   XPos 140 moveto
-   (2) centreshow
-   XPos 158 moveto
-   (1) centreshow
-   XPos 176 moveto
-   (0) centreshow
+    XPos 15.5 moveto
+    (9) centrecompshow
+    XPos 33.5 moveto
+    (8) centrecompshow
+    XPos 51.5 moveto
+    (7) centrecompshow
+    XPos 69.5 moveto
+    (6) centrecompshow
+    XPos 87.5 moveto
+    (5) centrecompshow
+    XPos 105.5 moveto
+    (4) centrecompshow
+    XPos 123.5 moveto
+    (3) centrecompshow
+    XPos 141.5 moveto
+    (2) centrecompshow
+    XPos 159.5 moveto
+    (1) centrecompshow
+    XPos 177.5 moveto
+    (0) centrecompshow
+ 
+    /Helvetica-Narrow findfont
+    4 scalefont setfont
 
-   /Helvetica-Narrow findfont
-   4 scalefont setfont
-
-   XPos 169 moveto
-   Pos PosStr cvs centreshow
-   XPos 7 moveto
-   Pos PosStr cvs centreshow } def
+    XPos 170 moveto
+    Pos PosStr cvs centreshow
+    XPos 8 moveto
+    Pos PosStr cvs centreshow } def
 
 /text
  { /Pos 1 def
