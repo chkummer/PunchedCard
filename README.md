@@ -17,9 +17,12 @@ Other Punch Card Services:
 
 More information about Punched Cards:
 * [The Punched Card](http://www.quadibloc.com/comp/cardint.htm)
-* [Punched Card Codes](http://homepage.divms.uiowa.edu/~jones/cards/codes.html)
+* [Punched Card Codes](http://homepage.divms.uiowa.edu/~jones/cards/codes.html) (Part of [ Douglas W. Jones Punched Card Collection](http://homepage.divms.uiowa.edu/~jones/cards/index.html))
 * [The Design of IBM Cards](http://bitsavers.org/pdf/ibm/punchedCard/Training/22-5526-4_The_Design_of_IBM_Cards_Mar56.pdf)
 * German Wikipedia-Article: [Lochkarte](https://de.wikipedia.org/wiki/Lochkarte)
+* YouTube-Video: [1964 IBM 029 Keypunch Card Punching Demonstration](https://www.youtube.com/watch?v=YnnGbcM-H8c)
+* YouTube-Video: [Punch Card Programming - Computerphile](https://www.youtube.com/watch?v=KG2M4ttzBnY)
+* YouTube-Video: [Computer Punch Cards Historical Overview - IBM Remington Rand UNIVAC - History Archives, # CH-0093](https://www.youtube.com/watch?v=kKJxzay85Vk)
 
 Standards:
 * ANSI INCITS 21-1967 (R2002): Rectangular Holes in Twelve-Row Punched 
