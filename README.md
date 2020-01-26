@@ -18,6 +18,7 @@ Other Punch Card Services:
 More information about Punched Cards:
 * [The Punched Card](http://www.quadibloc.com/comp/cardint.htm)
 * [Punched Card Codes](http://homepage.divms.uiowa.edu/~jones/cards/codes.html) (Part of [ Douglas W. Jones Punched Card Collection](http://homepage.divms.uiowa.edu/~jones/cards/index.html))
+* [Jim Scott's 'A Collection Of Punched Cards](http://www.jkmscott.net/data/Punched%20Cards.html)
 * [The Design of IBM Cards](http://bitsavers.org/pdf/ibm/punchedCard/Training/22-5526-4_The_Design_of_IBM_Cards_Mar56.pdf)
 * German Wikipedia-Article: [Lochkarte](https://de.wikipedia.org/wiki/Lochkarte)
 * YouTube-Video: [1964 IBM 029 Keypunch Card Punching Demonstration](https://www.youtube.com/watch?v=YnnGbcM-H8c)
