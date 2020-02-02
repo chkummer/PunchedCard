@@ -14,6 +14,7 @@ cat <<=EPS_HEADER_EOF=
 %%BoundingBox: 0 0 ${OUT_PAGE_WIDTH} ${OUT_PAGE_HEIGHT}
 %%EndComments
 
+%%BeginProcSet
 =EPS_HEADER_EOF=
 }
 
@@ -22,6 +23,7 @@ cat <<=EPS_HEADER_EOF=
 #
 EPS_INIT_PAGE () {
 cat <<=EPS_INIT_PAGE_EOF= 
+
 %%Page: ${OUT_PAGE_NUM}
 0.5 setlinewidth
 ${DOC_BORDER_COLOR} setrgbcolor
@@ -38,6 +40,7 @@ closepath stroke
 # EPS_CUTTER_FUNCTS
 #
 EPS_CUTTER_FUNCTS () {
+eval "sed 's/@@CUT_COLOR@@/${CUT_COLOR}/g' lib/${CARD_CORNER}_CardOutline.ps"
 cat <<=EPS_CUTTER_FUNCTS_EOF=
 /Pos 0 def
 /Hole 0 def
@@ -65,6 +68,7 @@ cat <<=EPS_CUTTER_FUNCTS_EOF=
 # EPS_PRINTER_FUNCTS
 #
 EPS_PRINTER_FUNCTS () {
+eval "sed 's/@@CARD_TEXT_COLOR@@/${CARD_TEXT_COLOR}/g' lib/${CARD_TYPE}_CardType.ps"
 cat <<=EPS_PRINTER_FUNCTS_EOF=
 /DotMatrixPattern <00 00 00 00 00 00 00 00> def
 

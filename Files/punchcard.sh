@@ -5,7 +5,6 @@
 #
 # For more inforamtion see https://github.com/chkummer/PunchedCard
 #
-INPUT_LINE="&-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ:#@'=\"¢.<(+|!$*);¬ ,%_>?"
 # default color values using postscript rgb schema
 CUT_COLOR="1 0 0" # red
 CARD_TEXT_COLOR="0 0 0" # black
@@ -17,6 +16,8 @@ CARD_CODE="IBM029"
 CARD_TYPE="IBM5081"
 # default value for corner cut of the card (Left, Right, Both or Uncut
 CARD_CORNER="Left"
+# input line number
+INPUT_LINENUM=1
 # split output for printer and cutter (0=no, 1=yes)
 SPLIT_OUTPUT=0
 # default output file name
@@ -36,7 +37,7 @@ CREATION_DATE=`date '+%d-%b-%Y'`
 # 
 # Shell Functions
 #
-# USAGE
+# USAGE: show script usage
 #
 USAGE () {
 cat <<=USAGE_EOF=
@@ -54,6 +55,41 @@ options are:
 =USAGE_EOF=
 exit
 }
+#
+# INIT_CARD: initialize punch card
+#
+INIT_CARD () {
+PAGEBREAK_CARD_NUM=$((${OUT_PAGE_NUM} * 3))
+if [ ${OUT_CARD_NUM} -gt ${PAGEBREAK_CARD_NUM} ]
+then
+    echo "showpage" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+    OUT_PAGE_NUM=`expr ${OUT_PAGE_NUM} + 1`
+    if [ ${SPLIT_OUTPUT} -eq 1 ]
+    then
+        OUTFILE_NUM=`expr ${OUTFILE_NUM} + 1`
+        OUTFILE_SEQNUM=`printf "%04d" ${OUTFILE_NUM}`
+        CUTTER_OUTFILE="${BASE_OUTFILE}_cutter_${OUTFILE_SEQNUM}.eps"
+        EPS_HEADER | tee ${OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+        EPS_CUTTER_FUNCTS | tee -a ${OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+        echo "%%EndProcSet" | tee -a ${OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+        EPS_INIT_PAGE | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+    else
+        EPS_INIT_PAGE | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+    fi
+fi
+echo "%%Card: ${OUT_CARD_NUM}" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+CARD_NUM_ON_PAGE=$(( ${OUT_CARD_NUM} % 3 ))
+case ${CARD_NUM_ON_PAGE} in
+    1)    echo "30 520 translate" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null;;
+    2)    echo "0 -245 translate" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null;;
+    0)    echo "0 -245 translate" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null;;
+esac
+echo "cardOutline" | tee -a ${OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+echo "printLayout" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} >/dev/null
+}
+#
+# checking for EPS Functions
+#
 if [ -r lib/EPS_Functions.sh ]
 then
     . lib/EPS_Functions.sh
@@ -79,6 +115,12 @@ done
 #
 # checking if all files are acessable
 #
+if [ -z "${INPUT_FILE}" ]
+then
+    echo "ERROR: no input file specified!"
+    USAGE
+    exit 1
+fi
 if [ -r ${INPUT_FILE} ]
 then
     if [ ${SPLIT_OUTPUT} -eq 1 ]
@@ -135,27 +177,26 @@ fi
 # all required files are available; let's go and create some output
 #
 EPS_HEADER | tee ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
-echo "%%BeginProcSet" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
-eval "sed 's/@@CUT_COLOR@@/${CUT_COLOR}/g' lib/${CARD_CORNER}_CardOutline.ps | tee -a ${OUTFILE} ${CUTTER_OUTFILE} >/dev/null"
 EPS_CUTTER_FUNCTS | tee -a ${OUTFILE} ${CUTTER_OUTFILE} >/dev/null
-eval "sed 's/@@CARD_TEXT_COLOR@@/${CARD_TEXT_COLOR}/g' lib/${CARD_TYPE}_CardType.ps | tee -a ${OUTFILE} ${PRINTER_OUTFILE} >/dev/null"
 EPS_PRINTER_FUNCTS | tee -a ${OUTFILE} ${PRINTER_OUTFILE} >/dev/null
-echo "%%EndProcSet\n" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+echo "%%EndProcSet" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
 EPS_INIT_PAGE | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
-echo "%%Card: ${OUT_CARD_NUM}" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
-echo "30 520 translate" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
-echo "cardOutline" | tee -a ${OUTFILE} ${CUTTER_OUTFILE} >/dev/null
-echo "printLayout" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} >/dev/null
-INPUT_LEN=`expr ${#INPUT_LINE} - 1`
-INPUT_POS=0
-# cat ${INPUT_FILE} | while read ${INPUT_LINE} || [[ -n ${INPUT_LINE} ]];
-while [ ${INPUT_POS} -le ${INPUT_LEN} ]
+# read input file
+cat ${INPUT_FILE} | while read INPUT_LINE || [[ -n ${INPUT_LINE} ]];
 do
-    CURR_CHAR=${INPUT_LINE:${INPUT_POS}:1}
-    CONVERT_CHAR
-    echo "/Pos `expr ${INPUT_POS} + 1` def" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
-    echo "[${HOLES}] { /Hole exch def punchHole} forall" | tee -a ${OUTFILE} ${CUTTER_OUTFILE} >/dev/null
-    echo "/DotMatrixPattern <${DOT_MATRIX}> def printDotMatrix" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} >/dev/null
-    INPUT_POS=`expr ${INPUT_POS} + 1`
+    INIT_CARD
+    INPUT_LEN=`expr ${#INPUT_LINE} - 1`
+    INPUT_POS=0
+    while [ ${INPUT_POS} -le ${INPUT_LEN} ]
+    do
+        CURR_CHAR=${INPUT_LINE:${INPUT_POS}:1}
+        CONVERT_CHAR
+        echo "/Pos `expr ${INPUT_POS} + 1` def" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+        echo "[${HOLES}] { /Hole exch def punchHole} forall" | tee -a ${OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+        echo "/DotMatrixPattern <${DOT_MATRIX}> def printDotMatrix" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} >/dev/null
+        INPUT_POS=`expr ${INPUT_POS} + 1`
+    done
+    INPUT_LINENUM=`expr ${INPUT_LINENUM} + 1`
+    OUT_CARD_NUM=`expr ${OUT_CARD_NUM} + 1`
 done
 echo "showpage" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
