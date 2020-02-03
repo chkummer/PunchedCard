@@ -63,8 +63,9 @@ case ${CURR_CHAR} in
     \#)  HOLES="8 3";    DOT_MATRIX="00 28 28 7C 28 7C 28 28";;
     @)   HOLES="8 4";    DOT_MATRIX="00 38 54 54 34 04 44 38";;
     \')  HOLES="8 5";    DOT_MATRIX="00 00 00 00 00 20 10 30";;
-    \")  HOLES="8 6";    DOT_MATRIX="00 00 00 00 00 28 28 28";;
-    ¢)   HOLES="8 7";    DOT_MATRIX="00 10 38 50 50 50 38 10";;  # Check this
+    \=)  HOLES="8 6";    DOT_MATRIX="00 00 00 7C 00 7C 00 00";;
+    \")  HOLES="8 7";    DOT_MATRIX="00 00 00 00 00 28 28 28";;
+    ¢)   HOLES="12 8 2"; DOT_MATRIX="00 10 38 50 50 50 38 10";;  # Check this
     .)   HOLES="12 8 3"; DOT_MATRIX="00 30 30 00 00 00 00 00";;
     \<)  HOLES="12 8 4"; DOT_MATRIX="00 08 10 20 40 20 10 08";;
     \()  HOLES="12 8 5"; DOT_MATRIX="00 08 10 20 20 20 10 08";;
@@ -81,7 +82,7 @@ case ${CURR_CHAR} in
     %)   HOLES="0 8 4";  DOT_MATRIX="00 0C 4C 20 10 08 64 60";;
     _)   HOLES="0 8 5";  DOT_MATRIX="00 7C 00 00 00 00 00 00";;
     \>)  HOLES="0 8 6";  DOT_MATRIX="00 40 20 10 08 10 20 40";;
-    ?)   HOLES="0 8 7";  DOT_MATRIX="00 10 00 10 08 04 44 38";;
-    *)   echo "WARNING: can not convert char";;
+    \?)  HOLES="0 8 7";  DOT_MATRIX="00 10 00 10 08 04 44 38";;
+    *)   HOLES="";       DOT_MATRIX="FE 82 82 82 82 82 82 FE"; echo "WARNING: can not convert char '${CURR_CHAR}' at line: '${INPUT_LINENUM}' pos: '${INPUT_POS}'";;
 esac
 }
