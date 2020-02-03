@@ -60,7 +60,7 @@ case ${CURR_CHAR} in
     Y)   HOLES="0 8";    DOT_MATRIX="00 10 10 10 28 44 44 44";;
     Z)   HOLES="0 9";    DOT_MATRIX="00 7C 40 20 10 08 04 7C";;
     :)   HOLES="8 2";    DOT_MATRIX="00 00 30 30 00 30 30 00";;
-    #)   HOLES="8 3";    DOT_MATRIX="00 28 28 7C 28 7C 28 28";;
+    \#)  HOLES="8 3";    DOT_MATRIX="00 28 28 7C 28 7C 28 28";;
     @)   HOLES="8 4";    DOT_MATRIX="00 38 54 54 34 04 44 38";;
     \')  HOLES="8 5";    DOT_MATRIX="00 00 00 00 00 20 10 30";;
     \")  HOLES="8 6";    DOT_MATRIX="00 00 00 00 00 28 28 28";;
@@ -80,7 +80,7 @@ case ${CURR_CHAR} in
     ,)   HOLES="0 8 3";  DOT_MATRIX="00 20 10 30 00 00 00 00";;
     %)   HOLES="0 8 4";  DOT_MATRIX="00 0C 4C 20 10 08 64 60";;
     _)   HOLES="0 8 5";  DOT_MATRIX="00 7C 00 00 00 00 00 00";;
-    \>)  HOLES="0 8 6";  DOT_MATRIX="00 40 20 10 80 10 20 40";;
+    \>)  HOLES="0 8 6";  DOT_MATRIX="00 40 20 10 08 10 20 40";;
     ?)   HOLES="0 8 7";  DOT_MATRIX="00 10 00 10 08 04 44 38";;
     *)   echo "WARNING: can not convert char";;
 esac
