@@ -195,6 +195,11 @@ do
         echo "[${HOLES}] { /Hole exch def punchHole} forall" | tee -a ${OUTFILE} ${CUTTER_OUTFILE} >/dev/null
         echo "/DotMatrixPattern <${DOT_MATRIX}> def printDotMatrix" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} >/dev/null
         INPUT_POS=`expr ${INPUT_POS} + 1`
+        if [ ${INPUT_POS} -eq 80 ]
+        then
+            echo "WARNING: line: '${INPUT_LINENUM}' is too long, ignoring rest of line"
+            INPUT_POS=`expr ${INPUT_LEN} + 1`
+        fi
     done
     INPUT_LINENUM=`expr ${INPUT_LINENUM} + 1`
     OUT_CARD_NUM=`expr ${OUT_CARD_NUM} + 1`
