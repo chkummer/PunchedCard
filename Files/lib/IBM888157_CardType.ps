@@ -1,0 +1,126 @@
+/centreshow 
+  { /mystring exch def
+    mystring stringwidth pop -2 div 0 rmoveto 
+    mystring show } def 
+
+/centrecompshow 
+  { /mystring exch def
+    gsave
+    0.7 1 scale
+    mystring stringwidth pop -2 div 0 rmoveto 
+    mystring show
+    grestore
+  } def 
+
+/singleCol
+  { /PosStr 2 string def
+    /XPos Pos 6.264 mul 11.5 add def
+
+    /Helvetica-Narrow findfont
+    8 scalefont setfont
+
+    XPos 15.5 moveto
+    (9) centrecompshow
+    XPos 33.5 moveto
+    (8) centrecompshow
+    XPos 51.5 moveto
+    (7) centrecompshow
+    XPos 69.5 moveto
+    (6) centrecompshow
+    XPos 87.5 moveto
+    (5) centrecompshow
+    XPos 105.5 moveto
+    (4) centrecompshow
+    XPos 123.5 moveto
+    (3) centrecompshow
+    XPos 141.5 moveto
+    (2) centrecompshow
+    XPos 159.5 moveto
+    (1) centrecompshow
+    XPos 177.5 moveto
+    (0) centrecompshow
+ 
+    /Helvetica-Narrow findfont
+    4 scalefont setfont
+
+    XPos 170 moveto
+    Pos PosStr cvs centreshow
+    XPos 8 moveto
+    Pos PosStr cvs centreshow } def
+
+/printLayout
+ { /Pos 1 def
+   @@CARD_TEXT_COLOR@@ setrgbcolor
+   { 
+     Pos singleCol
+     /Pos Pos 1 add def
+     Pos 80 gt
+     { exit } if
+     } loop
+
+   0.25 setlinewidth
+   15 8 moveto
+   0 226 rlineto
+   stroke
+   45.952 8 moveto
+   0 226 rlineto
+   stroke
+   52.216 8 moveto
+   0 226 rlineto
+   stroke
+   465.64 8 moveto
+   0 226 rlineto
+   stroke
+   516 8 moveto
+   0 226 rlineto
+   stroke
+   15 185.5 moveto
+   501 0 rlineto
+   stroke
+   52.216 215 moveto
+   413.424 0 rlineto
+   stroke
+   15 200 moveto
+   30.952 0 rlineto
+   stroke
+   
+   20.896 8 moveto
+   [4 4] 0 setdash
+   0 177.5 rlineto
+   stroke
+   [] 0 setdash
+
+   /Helvetica findfont
+   10 scalefont setfont
+
+   258.928 195.25 moveto
+   (F O R T R A N   S T A T E M E N T) centreshow
+
+   15 201 moveto
+   (C) show
+
+   /Helvetica findfont
+   4 scalefont setfont
+
+   490.82 198.25 moveto
+   (IDENTIFICATION) centreshow
+
+   30.476 193 moveto
+   (STATEMENT) centreshow
+
+   30.476 188.5 moveto
+   (NUMBER) centreshow
+
+   34.556 205 moveto
+   (FOR) centreshow
+
+   34.556 201 moveto
+   (COMMENT) centreshow
+
+   50.5 186 moveto
+   gsave
+   90 rotate
+   (CONTINUATION) show
+   grestore
+   } def
+
