@@ -14,6 +14,7 @@ And a nice documetation about [Punched Card Typography — IBM 026, 029, 129](ht
 
 ## Other Punch Card Services:
 * [Cardpunch: punch a punched card](http://www.kloth.net/services/cardpunch.php)
+* [punch-card encoding ported to Processing](https://github.com/jeffThompson/PunchCardEncoding)
 
 ## More information about Punched Cards:
 * [The Punched Card](http://www.quadibloc.com/comp/cardint.htm)
@@ -27,9 +28,12 @@ And a nice documetation about [Punched Card Typography — IBM 026, 029, 129](ht
 * PDF: [Van Ness - Principles of Punched Card Data Processing](https://ia601602.us.archive.org/5/items/bitsavers_ibmpunchedPrinciplesofPunchedCardDataProcessing196_18048029/Van_Ness_Principles_of_Punched_Card_Data_Processing_1962.pdf)
 * [IBM Punch Cards](http://www.columbia.edu/cu/computinghistory/cards.html)
 * [Early Card Punch Machines](http://www.columbia.edu/cu/computinghistory/oldpunch.html)
+* [Code like a girl: The First Program I Ever Wrote](https://code.likeagirl.io/the-first-program-i-ever-wrote-5a5a6b08469c)
 * English Wikipedia-Article: [Computer programming in the punched card era](https://en.wikipedia.org/wiki/Computer_programming_in_the_punched_card_era)
 * English Wikipedia-Article: [Fortran](https://en.wikipedia.org/wiki/Fortran)
 * English Wikipedia-Article: [COBOL](https://en.wikipedia.org/wiki/COBOL)
+* [Punched card facts for kids](https://kids.kiddle.co/Punched_card)
+* [IBM Punch Cards](http://www.columbia.edu/cu/computinghistory/cards.html)
 * German Wikipedia-Article: [Lochkarte](https://de.wikipedia.org/wiki/Lochkarte)
 * YouTube-Video: [1964 IBM 029 Keypunch Card Punching Demonstration](https://www.youtube.com/watch?v=YnnGbcM-H8c)
 * YouTube-Video: [Punch Card Programming - Computerphile](https://www.youtube.com/watch?v=KG2M4ttzBnY)
