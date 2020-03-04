@@ -16,6 +16,32 @@ And a nice documetation about [Punched Card Typography — IBM 026, 029, 129](ht
 * [Cardpunch: punch a punched card](http://www.kloth.net/services/cardpunch.php)
 * [punch-card encoding ported to Processing](https://github.com/jeffThompson/PunchCardEncoding)
 
+## Script
+In order to create your own punched cards you need to have access to:
+* (Laser-)Printer
+* Laser Cutter
+
+If you are a Linux or MacOSX user you may use this script without additional software. Depending on your laser cutter software or printer you may require a postscript converter such as Ghostscript on Linux, Preview on MacOSX or any other Vector Graphics Editor. Windows user may use an virtual machine running Linux or use something like [Cygwin](www.cygwin.com).
+
+### Script Usage
+The Shell-Script in this repository generates postcript file(s) form a text input file.
+```
+host:user$ ./punchcard.sh -h
+usage: ./punchcard.sh [options]
+
+options are:
+ -i <file>      # input file name
+ -c <code>      # card coding (default: IBM029)
+ -C <corners>   # card corners (default: Left)
+ -t <type>      # card type (default: IBM5081)
+ -o <outfile>   # output base file name (default: punchcard)
+ -s             # split output
+ -h             # this help text
+
+host:user$ 
+```
+See the currently implemented [card types](CardTypes.md).
+
 ## More information about Punched Cards:
 * [The Punched Card](http://www.quadibloc.com/comp/cardint.htm)
 * [Punched Card Codes](http://homepage.divms.uiowa.edu/~jones/cards/codes.html) (Part of [ Douglas W. Jones Punched Card Collection](http://homepage.divms.uiowa.edu/~jones/cards/index.html))
