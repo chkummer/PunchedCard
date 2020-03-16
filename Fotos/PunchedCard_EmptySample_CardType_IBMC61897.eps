@@ -1,0 +1,264 @@
+%!PS-Adobe-2.0 EPSF-1.2
+%%Title: PunchedCard (PunchedCard_EmptySample_CardType_IBMC61897.eps)
+%%Creator: punchcard.sh (https://github.com/chkummer/PunchedCard)
+%%CreationDate: 16-Mär-2020
+%%BoundingBox: 0 0 541 244
+%%EndComments
+
+%%BeginProcSet
+% Outline of a punched card where no upper corners are cut
+/cardOutline
+ { newpath
+   1 0 0 setrgbcolor
+   0.25 setlinewidth
+   18 0 moveto
+   495 0 rlineto
+   513 18 18 270 360 arc
+   0 198 rlineto
+   513 216 18 0 90 arc
+   -495  0 rlineto
+   18 216 18 90 180 arc
+   0 -198 rlineto
+   18 18 18 180 270 arc
+   closepath
+   stroke } def
+
+/Pos 0 def
+/Hole 0 def
+
+/hole
+ { newpath moveto
+   1 0 0 setrgbcolor
+   0.25 setlinewidth
+   -1.98 -4.5 rmoveto
+   3.96 0 rlineto
+   0 9 rlineto
+   -3.96 0 rlineto
+   0 -9 rlineto
+   closepath
+   stroke } def
+
+/punchHole
+ { /XPos Pos 6.264 mul 11.808 add def
+   XPos [180 162 144 126 108 90 72 54 36 18 0 198 218] Hole get hole } def
+
+/centreshow 
+  { /mystring exch def
+    mystring stringwidth pop -2 div 0 rmoveto 
+    mystring show } def 
+
+/centrecompshow 
+  { /mystring exch def
+    gsave
+    0.7 1 scale
+    mystring stringwidth pop -2 div 0 rmoveto 
+    mystring show
+    grestore
+  } def 
+
+/singleCol
+  { /PosStr 2 string def
+    /XPos Pos 6.264 mul 11.5 add def
+
+    /Helvetica-Narrow findfont
+    8 scalefont setfont
+
+    XPos 15.5 moveto
+    (9) centrecompshow
+    XPos 33.5 moveto
+    (8) centrecompshow
+    XPos 51.5 moveto
+    (7) centrecompshow
+    XPos 69.5 moveto
+    (6) centrecompshow
+    XPos 87.5 moveto
+    (5) centrecompshow
+    Pos 20 le 
+    Pos 61 ge
+    or 
+    { 
+      XPos 105.5 moveto
+      (4) centrecompshow } if
+    XPos 123.5 moveto
+    (3) centrecompshow
+    XPos 141.5 moveto
+    (2) centrecompshow
+    XPos 159.5 moveto
+    (1) centrecompshow
+    XPos 177.5 moveto
+    (0) centrecompshow
+ 
+    /Helvetica-Narrow findfont
+    4 scalefont setfont
+
+    XPos 170 moveto
+    Pos PosStr cvs centreshow
+    XPos 8 moveto
+    Pos PosStr cvs centreshow } def
+
+/printLayout
+ { /Pos 1 def
+   0 0 0 setrgbcolor
+   { 
+     Pos singleCol
+     /Pos Pos 1 add def
+     Pos 80 gt
+     { exit } if
+     } loop
+
+   0.25 setlinewidth
+   15 8 moveto
+   0 179 rlineto
+   stroke
+   15 190 moveto
+   0 44 rlineto
+   stroke
+   33.424 8 moveto
+   0 179 rlineto
+   stroke
+   33.424 190 moveto
+   0 5 rlineto
+   stroke
+   33.424 214.4 moveto
+   0 19.5 rlineto
+   stroke
+   40.82 195 moveto
+   0 19.5 rlineto
+   stroke
+   52.216 8 moveto
+   0 179 rlineto
+   stroke
+   52.216 190 moveto
+   0 5 rlineto
+   stroke
+   52.216 214.4 moveto
+   0 19.5 rlineto
+   stroke
+   58.48 8 moveto
+   0 179 rlineto
+   stroke
+   58.48 190 moveto
+   0 5 rlineto
+   stroke
+   58.486 214.4 moveto
+   0 19.5 rlineto
+   stroke
+   65.876 195 moveto
+   0 19.5 rlineto
+   stroke
+   76.14 195 moveto
+   0 19.5 rlineto
+   stroke
+
+   [3 2] 0 setdash
+   83.536 8 moveto
+   0 179 rlineto
+   stroke
+   83.536 190 moveto
+   0 5 rlineto
+   stroke
+   83.536 214.4 moveto
+   0 19.5 rlineto
+   stroke
+   108.592 195 moveto
+   0 19.5 rlineto
+   stroke
+   [] 0 setdash
+
+   465.64 8 moveto
+   0 179 rlineto
+   stroke
+   465.64 190 moveto
+   0 5 rlineto
+   stroke
+   465.64 214.4 moveto
+   0 19.5 rlineto
+   stroke
+   515.752 8 moveto
+   0 179 rlineto
+   stroke
+   515.752 190 moveto
+   0 44 rlineto
+   stroke
+
+   15 195 moveto
+   500.752 0 rlineto
+   stroke
+   15 202.5 moveto
+   500.752 0 rlineto
+   stroke
+   15 214.5 moveto
+   500.752 0 rlineto
+   stroke
+   15 222 moveto
+   500.752 0 rlineto
+   stroke
+
+   newpath
+   139.912 96.5 moveto
+   250.56 0 rlineto
+   0 24 rlineto
+   -250.56 0 rlineto
+   0 -24 rlineto
+   closepath
+   stroke
+
+   /Helvetica findfont
+   10 scalefont setfont
+
+   265.192 105.5 moveto
+   (C O B O L    S O U R C E    P R O G R A M    C A R D) centreshow
+
+   /Helvetica findfont
+   5 scalefont setfont
+
+   24.028 216.5 moveto
+   (PAGE) centreshow
+   42.82 216.5 moveto
+   (SERIAL) centreshow
+   55.348 216.5 moveto
+   (-) centreshow
+   59.48 216.5 moveto
+   (A) show
+   84.536 216.5 moveto
+   (B) show
+   268.324 216.5 moveto
+   (COBOL STATEMENT) centreshow
+   490.696 216.5 moveto
+   (IDENT) centreshow
+   27.91 197 moveto
+   (PAGE) centreshow
+   53.348 197 moveto
+   (SERIAL) centreshow
+   71.008 197 moveto
+   (-) centreshow
+   77.14 197 moveto
+   (A) show
+   109.592 197 moveto
+   (B) show
+   268.324 197 moveto
+   (COBOL STATEMENT) centreshow
+   } def
+
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def
+
+/printDotMatrix
+ { newpath
+   /XPos Pos 6.264 mul 9 add def
+   0.5 0.5 0.5 setrgbcolor
+   gsave
+   XPos 225 translate
+   6 6 scale
+   8 8 true
+   [8 0 0 8 0 0] { DotMatrixPattern } imagemask
+   grestore } bind def
+
+
+%%EndProcSet
+
+%%Page: 1
+%%Card: 1
+5 5 translate
+cardOutline
+printLayout
+showpage
