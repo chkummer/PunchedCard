@@ -20,6 +20,7 @@
 #
 CONVERT_CHAR () {
 case ${CURR_CHAR} in
+    \ )  HOLES="";       DOT_MATRIX="00 00 00 00 00 00 00 00";;
     \&)  HOLES="12";     DOT_MATRIX="00 34 48 54 20 50 50 20";;
     -)   HOLES="11";     DOT_MATRIX="00 00 00 00 7C 00 00 00";;
     0)   HOLES="0";      DOT_MATRIX="00 18 24 24 24 24 24 18";;
@@ -31,10 +32,10 @@ case ${CURR_CHAR} in
     6)   HOLES="6";      DOT_MATRIX="00 38 44 44 78 40 20 18";;
     7)   HOLES="7";      DOT_MATRIX="00 20 20 20 10 08 04 7C";;
     8)   HOLES="8";      DOT_MATRIX="00 38 44 44 38 44 44 38";;
-    9)   HOLES="9";      DOT_MATRIX="00 30 08 04 38 44 44 38";;
+    9)   HOLES="9";      DOT_MATRIX="00 30 08 04 3C 44 44 38";;
     A)   HOLES="12 1";   DOT_MATRIX="00 44 44 7C 44 44 28 10";;
-    B)   HOLES="12 2";   DOT_MATRIX="00 78 44 44 78 44 44 78";;
-    C)   HOLES="12 3";   DOT_MATRIX="00 38 24 24 38 24 24 78";;
+    B)   HOLES="12 2";   DOT_MATRIX="00 38 24 24 38 24 24 78";;
+    C)   HOLES="12 3";   DOT_MATRIX="00 38 44 40 40 40 44 38";;
     D)   HOLES="12 4";   DOT_MATRIX="00 78 24 24 24 24 24 78";;
     E)   HOLES="12 5";   DOT_MATRIX="00 7C 40 40 78 40 40 7C";;
     F)   HOLES="12 6";   DOT_MATRIX="00 40 40 40 78 40 40 7C";;
@@ -60,14 +61,14 @@ case ${CURR_CHAR} in
     Y)   HOLES="0 8";    DOT_MATRIX="00 10 10 10 10 28 44 44";;
     Z)   HOLES="0 9";    DOT_MATRIX="00 7C 40 20 10 08 04 7C";;
     :)   HOLES="8 2";    DOT_MATRIX="00 00 30 30 00 30 30 00";;
-    \#)  HOLES="8 3";    DOT_MATRIX="00 28 28 &C 00 6C 28 28";;
+    \#)  HOLES="8 3";    DOT_MATRIX="00 28 28 6C 00 6C 28 28";;
     @)   HOLES="8 4";    DOT_MATRIX="00 38 54 54 34 04 44 38";;
     \')  HOLES="8 5";    DOT_MATRIX="00 00 00 00 00 30 30 30";;
     \=)  HOLES="8 6";    DOT_MATRIX="00 00 00 7C 00 7C 00 00";;
     \")  HOLES="8 7";    DOT_MATRIX="00 00 00 00 00 28 28 28";;
     ¢)   HOLES="12 8 2"; DOT_MATRIX="00 10 38 40 40 40 38 10";;
     .)   HOLES="12 8 3"; DOT_MATRIX="00 30 30 00 00 00 00 00";;
-    \<)  HOLES="12 8 4"; DOT_MATRIX="00 40 08 10 20 10 08 04";;
+    \<)  HOLES="12 8 4"; DOT_MATRIX="00 04 08 10 20 10 08 04";;
     \()  HOLES="12 8 5"; DOT_MATRIX="00 08 10 20 20 20 10 08";;
     +)   HOLES="12 8 6"; DOT_MATRIX="00 00 10 10 7C 10 10 00";;
     \|)  HOLES="12 8 7"; DOT_MATRIX="00 00 10 10 10 10 10 00";;
@@ -77,12 +78,11 @@ case ${CURR_CHAR} in
     \))  HOLES="11 8 5"; DOT_MATRIX="00 20 10 08 08 08 10 20";;
     \;)  HOLES="11 8 6"; DOT_MATRIX="00 20 10 30 30 00 30 30";;
     ¬)   HOLES="11 8 7"; DOT_MATRIX="00 04 04 7C 00 00 00 00";;
-    \ )  HOLES="0 8 2";  DOT_MATRIX="00 00 00 00 00 00 00 00";;
     ,)   HOLES="0 8 3";  DOT_MATRIX="00 20 10 30 30 00 00 00";;
     %)   HOLES="0 8 4";  DOT_MATRIX="00 4C 4C 20 10 08 64 64";;
     _)   HOLES="0 8 5";  DOT_MATRIX="00 7C 00 00 00 00 00 00";;
     \>)  HOLES="0 8 6";  DOT_MATRIX="00 40 20 10 08 10 20 40";;
     \?)  HOLES="0 8 7";  DOT_MATRIX="00 10 00 10 10 08 48 30";;
-    *)   HOLES="";       DOT_MATRIX="FE 82 82 82 82 82 82 FE"; echo "WARNING: can not convert char '${CURR_CHAR}' at line: '${INPUT_LINENUM}' pos: '${INPUT_POS}'";;
+    *)   HOLES="0 8 2";  DOT_MATRIX="00 00 00 00 00 00 00 00"; echo "WARNING: can not convert char '${CURR_CHAR}' at line: '${INPUT_LINENUM}' pos: '${INPUT_POS}'";;
 esac
 }
