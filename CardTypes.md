@@ -1,5 +1,10 @@
 # Card Types
 
+## Blank
+
+![Empty Sample of an Blank Card Type](Fotos/PunchedCard_EmptySample_CardType_Blank_72dpi.png)
+
+
 ## IBM5081
 
 ![Empty Sample of an IBM5081 Card Type](Fotos/PunchedCard_EmptySample_CardType_IBM5081_72dpi.png)
