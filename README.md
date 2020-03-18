@@ -40,7 +40,7 @@ options are:
 
 host:user$ 
 ```
-See the currently implemented [card types](CardTypes.md).
+See the currently implemented [card types](CardTypes.md) and [card corners](CardCorners.md).
 
 ## More information about Punched Cards:
 * [The Punched Card](http://www.quadibloc.com/comp/cardint.htm)
