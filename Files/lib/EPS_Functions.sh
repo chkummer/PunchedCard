@@ -40,7 +40,7 @@ closepath stroke
 # EPS_CUTTER_FUNCTS
 #
 EPS_CUTTER_FUNCTS () {
-eval "sed 's/@@CUT_COLOR@@/${CUT_COLOR}/g' lib/${CARD_CORNER}_CardOutline.ps"
+eval "sed 's/@@CUT_COLOR@@/${CUT_COLOR}/g' lib/${CARD_OUTLINE}_${CARD_CORNER}_CardOutline.ps"
 cat <<=EPS_CUTTER_FUNCTS_EOF=
 /Pos 0 def
 /Hole 0 def

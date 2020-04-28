@@ -14,8 +14,10 @@ DOT_MATRIX_COLOR="0.5 0.5 0.5" # gray
 CARD_CODE="IBM029"
 # default value for the card type (background printing)
 CARD_TYPE="IBM5081"
-# default value for corner cut of the card (Left, Right, Both or Uncut
+# default value for corner cut of the card (Left, Right, Both or Uncut)
 CARD_CORNER="Left"
+# card outline default is Round this may be changed by using the argument '-S' to change it to Square
+CARD_OUTLINE="Round"
 # input line number
 INPUT_LINENUM=1
 # split output for printer and cutter (0=no, 1=yes)
@@ -47,6 +49,7 @@ options are:
  -i <file>      # input file name
  -c <code>      # card coding (default: ${CARD_CODE})
  -C <corners>   # card corners (default: ${CARD_CORNER})
+ -S             # change from round to square corners
  -t <type>      # card type (default: ${CARD_TYPE})
  -o <outfile>   # output base file name (default: ${BASE_OUTFILE})
  -s             # split output
@@ -100,12 +103,13 @@ fi
 #
 # Main
 #
-while getopts i:c:C:t:o:sh option
+while getopts i:c:C:t:o:Ssh option
 do
     case "${option}" in
         i) INPUT_FILE=${OPTARG};;
         c) CARD_CODE=${OPTARG};;
         C) CARD_CORNER=${OPTARG};;
+	S) CARD_OUTLINE="Square";;
         t) CARD_TYPE=${OPTARG};;
         o) BASE_OUTFILE=${OPTARG};;
         s) SPLIT_OUTPUT=1;;
@@ -151,10 +155,10 @@ else
     done
     exit 1
 fi
-if [ ! -r lib/${CARD_CORNER}_CardOutline.ps ]
+if [ ! -r lib/${CARD_OUTLINE}_${CARD_CORNER}_CardOutline.ps ]
 then
-    echo "ERROR: can't read lib/${CARD_CORNER}_CardOutline.ps"
-    CARD_CORNER_LIST=`ls lib/*_CardOutline.ps | sed 's?^.*lib/??g;s?_CardOutline.ps??g'`
+    echo "ERROR: can't read lib/${CARD_OUTLINE}_${CARD_CORNER}_CardOutline.ps"
+    CARD_CORNER_LIST=`ls lib/${CARD_OUTLINE}_*_CardOutline.ps | awk -F_ '{print $2}'`
     echo "Valid Card Corners are:"
     for CARD_CORNER_ITEM in ${CARD_CORNER_LIST}
     do
