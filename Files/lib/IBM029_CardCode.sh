@@ -17,6 +17,8 @@
 # 
 # For more information about Card Codes read:
 #   http://homepage.divms.uiowa.edu/~jones/cards/codes.html
+# or
+#   https://www.masswerk.at/misc/card-punch-typography/editor.html
 #
 CONVERT_CHAR () {
 case ${CURR_CHAR} in
