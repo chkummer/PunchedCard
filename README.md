@@ -9,12 +9,14 @@ Here is a sample Punched Card:
 mass:werk is offering some other Punched Card Services:
 * [Virtual Card Read-Punch](https://www.masswerk.at/card-readpunch/)
 * [Punch Card Sampler](https://www.masswerk.at/cardsampler/)
+* Font Editor for [IBM 026](https://www.masswerk.at/misc/card-punch-typography/editor026.html) or [IBM 029 and 129](https://www.masswerk.at/misc/card-punch-typography/editor.html)
 
 And a nice documetation about [Punched Card Typography — IBM 026, 029, 129](https://www.masswerk.at/misc/card-punch-typography/).
 
 ## Other Punch Card Services:
 * [Cardpunch: punch a punched card](http://www.kloth.net/services/cardpunch.php)
 * [punch-card encoding ported to Processing](https://github.com/jeffThompson/PunchCardEncoding)
+* [Virtual IBM Punch Card Data Processing](http://sims.durgadas.com/punchcards/ibm029.html)
 
 ## Script
 In order to create your own punched cards you need to have access to:
@@ -33,6 +35,7 @@ options are:
  -i <file>      # input file name
  -c <code>      # card coding (default: IBM029)
  -C <corners>   # card corners (default: Left)
+ -S             # change from round to square corners
  -t <type>      # card type (default: IBM5081)
  -o <outfile>   # output base file name (default: punchcard)
  -s             # split output
