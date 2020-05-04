@@ -52,7 +52,7 @@ See the currently implemented [card types](CardTypes.md) and [card corners](Card
 * [Jim Scott's 'A Collection Of Punched Cards](http://www.jkmscott.net/data/Punched%20Cards.html)
 * [Collected Information on Punched Card Codes](http://www.chilton-computing.org.uk/acl/literature/chapman/p013.htm)
 * [columbia.edu: Early Card Punch Machines](http://www.columbia.edu/cu/computinghistory/oldpunch.html)
-* [columbia.edu: IBM Key Punches](http://www.columbia.edu/cu/computinghistory/keypunch.html) more details on [columbia.edu: The IBM 026 Key Punch](http://www.columbia.edu/cu/computinghistory/026.html) or [columbia.edu: The IBM 029 Key Punch](http://www.columbia.edu/cu/computinghistory/029.html)
+* [columbia.edu: IBM Key Punches](http://www.columbia.edu/cu/computinghistory/keypunch.html) more details on the [IBM 026](http://www.columbia.edu/cu/computinghistory/026.html) or [IBM 029](http://www.columbia.edu/cu/computinghistory/029.html) Key Punch
 * [columbia.edu: IBM Punch Cards](http://www.columbia.edu/cu/computinghistory/cards.html)
 * [Keypunch029 — for all your punched card font needs ...](https://scruss.com/blog/2017/03/21/keypunch029-for-all-your-punched-card-font-needs/)
 * [Two-Bit History: The IBM 029 Card Punch](https://twobithistory.org/2018/06/23/ibm-029-card-punch.html)
