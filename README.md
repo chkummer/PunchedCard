@@ -90,9 +90,8 @@ See the currently implemented [card types](CardTypes.md) and [card corners](Card
 
 ## Some Hardware Projects:
 * [Tim Jagenberg: Punching a Card](https://tim.jagenberg.info/tag/ibm-model-029/)
-* [hackaday.io: Binary Punched Card Reader]{https://hackaday.io/project/9753-binary-punched-card-reader}
-* [hackaday.io: Punched Card Reader for RC2014 Z80 Computer](https://hackaday.io/project/11772-punched-card-reader-for-rc2014-z80-computer)
-** [hackaday.io: Test punch card punched](https://hackaday.io/project/11772-punched-card-reader-for-rc2014-z80-computer/log/38393-test-punch-card-punched)
+* [hackaday.io: Binary Punched Card Reader](https://hackaday.io/project/9753-binary-punched-card-reader)
+* [hackaday.io: Punched Card Reader for RC2014 Z80 Computer](https://hackaday.io/project/11772-punched-card-reader-for-rc2014-z80-computer) and subproject [Test punch card punched](https://hackaday.io/project/11772-punched-card-reader-for-rc2014-z80-computer/log/38393-test-punch-card-punched)
 
 ## Hints, Tips and Tricks
 * [Align Printer and Cutter Coordinates](AlignPrinterAndCutterCoordinates.md)
