@@ -17,6 +17,7 @@ And a nice documetation about [Punched Card Typography — IBM 026, 029, 129](ht
 * [Cardpunch: punch a punched card](http://www.kloth.net/services/cardpunch.php)
 * [punch-card encoding ported to Processing](https://github.com/jeffThompson/PunchCardEncoding)
 * [Virtual IBM Punch Card Data Processing](http://sims.durgadas.com/punchcards/ibm029.html)
+* [Punch Card Emulator](http://tyleregeto.com/article/punch-card-emulator)
 
 ## Script
 In order to create your own punched cards you need to have access to:
@@ -82,6 +83,12 @@ See the currently implemented [card types](CardTypes.md) and [card corners](Card
 * ANSI INCITS 21-1967 (R2002): Rectangular Holes in Twelve-Row Punched 
 * ISO 1681:1973(en): Information processing - Unpunched paper cards - Specification
 * ISO 6586:1980(en): Data processing — Implementation of the ISO 7- bit and 8- bit coded character sets on punched cards
+
+## Some Hardware Projects:
+* [Tim Jagenberg: Punching a Card](https://tim.jagenberg.info/tag/ibm-model-029/)
+* [hackaday.io: Binary Punched Card Reader]{https://hackaday.io/project/9753-binary-punched-card-reader}
+* [hackaday.io: Punched Card Reader for RC2014 Z80 Computer](https://hackaday.io/project/11772-punched-card-reader-for-rc2014-z80-computer)
+** [hackaday.io: Test punch card punched](https://hackaday.io/project/11772-punched-card-reader-for-rc2014-z80-computer/log/38393-test-punch-card-punched)
 
 ## Hints, Tips and Tricks
 * [Align Printer and Cutter Coordinates](AlignPrinterAndCutterCoordinates.md)
