@@ -13,12 +13,6 @@ mass:werk is offering some other Punched Card Services:
 
 And a nice documetation about [Punched Card Typography — IBM 026, 029, 129](https://www.masswerk.at/misc/card-punch-typography/).
 
-## Other Punch Card Services:
-* [Cardpunch: punch a punched card](http://www.kloth.net/services/cardpunch.php)
-* [punch-card encoding ported to Processing](https://github.com/jeffThompson/PunchCardEncoding)
-* [Virtual IBM Punch Card Data Processing](http://sims.durgadas.com/punchcards/ibm029.html)
-* [Punch Card Emulator](http://tyleregeto.com/article/punch-card-emulator)
-
 ## Script
 In order to create your own punched cards you need to have access to:
 * (Laser-)Printer
@@ -46,52 +40,8 @@ host:user$
 ```
 See the currently implemented [card types](CardTypes.md) and [card corners](CardCorners.md).
 
-## More information about Punched Cards:
-* [The Punched Card](http://www.quadibloc.com/comp/cardint.htm)
-* [Punched Card Codes](http://homepage.divms.uiowa.edu/~jones/cards/codes.html) (Part of [ Douglas W. Jones Punched Card Collection](http://homepage.divms.uiowa.edu/~jones/cards/index.html))
-* [Jim Scott's 'A Collection Of Punched Cards](http://www.jkmscott.net/data/Punched%20Cards.html)
-* [Collected Information on Punched Card Codes](http://www.chilton-computing.org.uk/acl/literature/chapman/p013.htm)
-* [columbia.edu: Early Card Punch Machines](http://www.columbia.edu/cu/computinghistory/oldpunch.html)
-* [columbia.edu: IBM Key Punches](http://www.columbia.edu/cu/computinghistory/keypunch.html) more details on the [IBM 026](http://www.columbia.edu/cu/computinghistory/026.html) or [IBM 029](http://www.columbia.edu/cu/computinghistory/029.html) Key Punch
-* [columbia.edu: IBM Punch Cards](http://www.columbia.edu/cu/computinghistory/cards.html)
-* [Keypunch029 — for all your punched card font needs ...](https://scruss.com/blog/2017/03/21/keypunch029-for-all-your-punched-card-font-needs/)
-* [Two-Bit History: The IBM 029 Card Punch](https://twobithistory.org/2018/06/23/ibm-029-card-punch.html)
-* PDF: [The Design of IBM Cards](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Training/22-5526-4_The_Design_of_IBM_Cards_Mar56.pdf)
-* PDF: [Card Equipment Summary (Aug-1957)](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Training/Card_Equipment_Summary_Aug57.pdf)
-* PDF: [Machine Functions (Mar-1961)](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Training/224-8208-3_Machine_Functions_Mar61.pdf)
-* PDF: [An Introduction to IBM Punched Card Data Processing](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Training/F20-0074_An_Introduction_to_IBM_Punched_Card_Data_Processing.pdf)
-* PDF: [Principles of Punched Card Data Processing](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Training/Van_Ness_Principles_of_Punched_Card_Data_Processing_1962.pdf)
-* PDF: [Punched Card Data Processing](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Training/Levy_Punched_Card_Data_Processing_1967.pdf)
-* PDF: [Reference Manual IBM 24 Card Punch and IBM 26 Printing Card Punch](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/A24-0520-3_24_26_Card_Punch_Reference_Manual_Oct1965.pdf)
-* PDF: [IBM Customer Engineering Manual of Instruction Card Punch Type 24 and Printing Card Punch Type 26](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/22-8319-0_24_26_Customer_Engineering_Preliminary_Manual_of_Instruction_1950.pdf)
-* PDF: [IBM029 Field Engineering Maintenance Manual](http://www.ed-thelen.org/comp-hist/IBM029-Field-Eng-Maint-Man-r.pdf)
-* PDF: [IBM 129 Card Data Recorder Model 1, 2 and 3 Theory - Maintenance](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/129/SY22-6882-3_129_Maintenance_Mar74.pdf)
-* PDF: [Do Not Fold, Spindle or Mutilate — THE ‘HOLE’ STORY OF PUNCHED CARDS](http://www.gfierheller.ca/wp-content/uploads/2014/02/Do-Not-Fold-Feb-7-2014-web.pdf)
-* [Code like a girl: The First Program I Ever Wrote](https://code.likeagirl.io/the-first-program-i-ever-wrote-5a5a6b08469c)
-* English Wikipedia-Article: [Computer programming in the punched card era](https://en.wikipedia.org/wiki/Computer_programming_in_the_punched_card_era)
-* English Wikipedia-Article: [Fortran](https://en.wikipedia.org/wiki/Fortran)
-* English Wikipedia-Article: [COBOL](https://en.wikipedia.org/wiki/COBOL)
-* [Punched card facts for kids](https://kids.kiddle.co/Punched_card)
-* [IBM Punch Cards](http://www.columbia.edu/cu/computinghistory/cards.html)
-* PDF: [A  Programmer's Introduction to IBM System/360 Assembler Language](http://bitsavers.trailing-edge.com/pdf/ibm/360/asm/SC20-1646-6_int360asm_Aug70.pdf)
-* PDF: [Systems Reference Library: IBM System/360 Basic Programming Support Basic Assembler Language](http://www.bitsavers.org/pdf/ibm/360/bos_bps/C20-6503-0_BAL_Feb65.pdf)
-* PDF: [SLAC Computation Group CGTM 17 Aug-1967: SYSTEM/360 ASSEMBLER LANGUAGE PROGRAMMING](https://www.slac.stanford.edu/vault/collvault/greylit/cgtm/CGTM17A.pdf)
-* WikiBook: [360 Assemby](https://en.wikibooks.org/wiki/360_Assembly)
-* German Wikipedia-Article: [Lochkarte](https://de.wikipedia.org/wiki/Lochkarte)
-* YouTube-Video: [1964 IBM 029 Keypunch Card Punching Demonstration](https://www.youtube.com/watch?v=YnnGbcM-H8c)
-* YouTube-Video: [Punch Card Programming - Computerphile](https://www.youtube.com/watch?v=KG2M4ttzBnY)
-* YouTube-Video: [Computer Punch Cards Historical Overview - IBM Remington Rand UNIVAC - History Archives, # CH-0093](https://www.youtube.com/watch?v=kKJxzay85Vk)
-* YouTube-Video: [PeriscopeFilm - PUNCHED CARD DATA PROCESSING INTRODUCTION IBM 029 COMPUTER 62454](https://www.youtube.com/watch?v=etu-cH-nkIA)
-
-## Standards:
-* ANSI INCITS 21-1967 (R2002): Rectangular Holes in Twelve-Row Punched 
-* ISO 1681:1973(en): Information processing - Unpunched paper cards - Specification
-* ISO 6586:1980(en): Data processing — Implementation of the ISO 7- bit and 8- bit coded character sets on punched cards
-
-## Some Hardware Projects:
-* [Tim Jagenberg: Punching a Card](https://tim.jagenberg.info/tag/ibm-model-029/)
-* [hackaday.io: Binary Punched Card Reader](https://hackaday.io/project/9753-binary-punched-card-reader)
-* [hackaday.io: Punched Card Reader for RC2014 Z80 Computer](https://hackaday.io/project/11772-punched-card-reader-for-rc2014-z80-computer) and subproject [Test punch card punched](https://hackaday.io/project/11772-punched-card-reader-for-rc2014-z80-computer/log/38393-test-punch-card-punched)
-
 ## Hints, Tips and Tricks
 * [Align Printer and Cutter Coordinates](AlignPrinterAndCutterCoordinates.md)
+
+## More information about Punched Cards
+There is more information about puched cards here: [ReadMore.md](ReadMore.md)
