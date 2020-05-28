@@ -36,9 +36,9 @@ options are:
  -s             # split output
  -h             # this help text
 
-host:user$ 
+host:user$
 ```
-See the currently implemented [card types](CardTypes.md) and [card corners](CardCorners.md).
+See the currently implemented [card types](CardTypes.md), [card corners](CardCorners.md) and [card codes](CardCodes.md).
 
 ## Hints, Tips and Tricks
 * [Align Printer and Cutter Coordinates](AlignPrinterAndCutterCoordinates.md)
