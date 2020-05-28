@@ -4,13 +4,13 @@
 * [columbia.edu: IBM Punch Cards](http://www.columbia.edu/cu/computinghistory/cards.html)
 * PDF: [Card Equipment Summary (Aug-1957)](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Training/Card_Equipment_Summary_Aug57.pdf)
 * PDF: [Machine Functions (Mar-1961)](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Training/224-8208-3_Machine_Functions_Mar61.pdf)
-* [IBM Punch Cards](http://www.columbia.edu/cu/computinghistory/cards.html)
 * German Wikipedia-Article: [Lochkarte](https://de.wikipedia.org/wiki/Lochkarte)
 * Video: [Punch Card Programming - Computerphile](https://www.youtube.com/watch?v=KG2M4ttzBnY)
 * Video: [Computer Punch Cards Historical Overview - IBM Remington Rand UNIVAC - History Archives, # CH-0093](https://www.youtube.com/watch?v=kKJxzay85Vk)
 * Video: [PeriscopeFilm - PUNCHED CARD DATA PROCESSING INTRODUCTION IBM 029 COMPUTER 62454](https://www.youtube.com/watch?v=etu-cH-nkIA)
 
 ## Punched Cards
+* [Jim Scott's 'A Collection Of Punched Cards](http://www.jkmscott.net/data/Punched%20Cards.html)
 * [The Punched Card](http://www.quadibloc.com/comp/cardint.htm)
 * PDF: [The Design of IBM Cards](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Training/22-5526-4_The_Design_of_IBM_Cards_Mar56.pdf)
 * PDF: [An Introduction to IBM Punched Card Data Processing](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Training/F20-0074_An_Introduction_to_IBM_Punched_Card_Data_Processing.pdf)
@@ -20,7 +20,6 @@
 
 ## Punched Card Codes
 * [Punched Card Codes](http://homepage.divms.uiowa.edu/~jones/cards/codes.html) (Part of [ Douglas W. Jones Punched Card Collection](http://homepage.divms.uiowa.edu/~jones/cards/index.html))
-* [Jim Scott's 'A Collection Of Punched Cards](http://www.jkmscott.net/data/Punched%20Cards.html)
 * [Collected Information on Punched Card Codes](http://www.chilton-computing.org.uk/acl/literature/chapman/p013.htm)
 
 ## Programming
@@ -41,12 +40,13 @@
 * [colubia.edu: The IBM 026 Key Punch](http://www.columbia.edu/cu/computinghistory/026.html)
 * PDF: [IBM 24-26-56 Operator's Guide](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/229-3125_24-26_Operators_Guide.pdf)
 * PDF: [Reference Manual IBM 24 Card Punch and IBM 26 Printing Card Punch](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/A24-0520-3_24_26_Card_Punch_Reference_Manual_Oct1965.pdf)
-* PDF: [IBM Customer Engineering Manual of Instruction Card Punch Type 24 and Printing Card Punch Type 26](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/22-8319-0_24_26_Customer_Engineering_Preliminary_Manual_of_Instruction_1950.pdf) on Pages 74-76 Code Plate
+* PDF: [IBM Customer Engineering Manual of Instruction Card Punch Type 24 and Printing Card Punch Type 26](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/22-8319-0_24_26_Customer_Engineering_Preliminary_Manual_of_Instruction_1950.pdf)
 * PDF: [Field Engineering Maintenance Manual IBM 24 - Base Machines](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/225-6535-5_24-Base_Machines_FEMM_Dec65.pdf)
 * PDF: [24 Card Punch 26 Printing Card Punch Parts Catalog](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/123-7091-3_24_25_Parts_Catalog_Apr1963.pdf) on Page 21 Print Unit Asm Code Plate
 
 ### Code Plates
-See: [Reference Manual IBM 24 Card Punch and IBM 26 Printing Card Punch](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/A24-0520-3_24_26_Card_Punch_Reference_Manual_Oct1965.pdf) Page 28 Special-Character Arrangements and Figure 23
+See: [Reference Manual IBM 24 Card Punch and IBM 26 Printing Card Punch](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/A24-0520-3_24_26_Card_Punch_Reference_Manual_Oct1965.pdf) Page 28 Special-Character Arrangements and Figure 23 and [IBM Customer Engineering Manual of Instruction Card Punch Type 24 and Printing Card Punch Type 26](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/22-8319-0_24_26_Customer_Engineering_Preliminary_Manual_of_Instruction_1950.pdf) on Pages 74-76 Code Plate
+
 Taken from  [24 Card Punch 26 Printing Card Punch Parts Catalog](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/123-7091-3_24_25_Parts_Catalog_Apr1963.pdf) on Page 21 Print Unit Asm Code Plate
 
 | Part No | Option | 12 | 11 | 0-1 | 8-3 | 12-8-3 | 11-8-3 | 0-8-3 | 8-4 | 12-8-4 | 11-8-4 | 0-8-4 |
@@ -76,7 +76,7 @@ Taken from  [24 Card Punch 26 Printing Card Punch Parts Catalog](http://bitsaver
 * Video: [1964 IBM 029 Keypunch Card Punching Demonstration](https://www.youtube.com/watch?v=YnnGbcM-H8c)
 
 ### Code Plates
-See [IBM029 Field Engineering Maintenance Manual](http://www.ed-thelen.org/comp-hist/IBM029-Field-Eng-Maint-Man-r.pdf) Page 56-64 Print Unit Figure 4-39 Overlay for Figure 4-40, Figure 4-40 Code Plate Chart E'L', Figure 4-46 Character Patterns E'L', Figure 4-47 Character Patterns E'A'
+See [IBM029 Field Engineering Maintenance Manual](http://www.ed-thelen.org/comp-hist/IBM029-Field-Eng-Maint-Man-r.pdf) Page 56-64 Print Unit Figure 4-39 Overlay for Figure 4-40, Figure 4-40 Code Plate Chart E'L', Figure 4-46 Character Patterns E'L', Figure 4-47 Character Patterns E'A' and [Reference Manual IBM 29 Card Punch](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/029/A24-3332-3_29_Reference_Man.pdf) Page 38 Printing / Character Arrangements and Page 42 Figure 29 Key Graphics and Punched-Hole Codes
 Taken from [IBM029 Card Punch Illustrated Parts Catalog](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/029/S124-0085-5_29_Parts_Man_Dec68.pdf) Page 117-120
 
 | Part No | Description                            |

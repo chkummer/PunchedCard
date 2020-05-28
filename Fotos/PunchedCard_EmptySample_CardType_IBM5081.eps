@@ -9,7 +9,7 @@
 % Outline of a punched card where the upper left corner was cut
 /cardOutline
  { newpath
-   1 0 0 setrgbcolor
+   0 0 0 setrgbcolor
    0.25 setlinewidth
    18 0 moveto
    495 0 rlineto
@@ -17,8 +17,8 @@
    0 198 rlineto
    513 216 18 0 90 arc
    -495  0 rlineto
-   -18 -31.176 rlineto
-   0 -184.824 rlineto
+   18 216 18 90 180 arc
+   0 -198 rlineto
    18 18 18 180 270 arc
    closepath
    stroke } def
@@ -28,7 +28,7 @@
 
 /hole
  { newpath moveto
-   1 0 0 setrgbcolor
+   0 0 0 setrgbcolor
    0.25 setlinewidth
    -1.98 -4.5 rmoveto
    3.96 0 rlineto
@@ -42,19 +42,19 @@
  { /XPos Pos 6.264 mul 11.808 add def
    XPos [180 162 144 126 108 90 72 54 36 18 0 198 218] Hole get hole } def
 
-/centreshow 
+/centreshow
   { /mystring exch def
-    mystring stringwidth pop -2 div 0 rmoveto 
-    mystring show } def 
+    mystring stringwidth pop -2 div 0 rmoveto
+    mystring show } def
 
-/centrecompshow 
+/centrecompshow
   { /mystring exch def
     gsave
     0.7 1 scale
-    mystring stringwidth pop -2 div 0 rmoveto 
+    mystring stringwidth pop -2 div 0 rmoveto
     mystring show
     grestore
-  } def 
+  } def
 
 /singleCol
   { /PosStr 2 string def
@@ -83,7 +83,7 @@
     (1) centrecompshow
     XPos 177.5 moveto
     (0) centrecompshow
- 
+
     /Helvetica-Narrow findfont
     4 scalefont setfont
 
@@ -95,7 +95,7 @@
 /printLayout
  { /Pos 1 def
    0 0 0 setrgbcolor
-   { 
+   {
      Pos singleCol
      /Pos Pos 1 add def
      Pos 80 gt
