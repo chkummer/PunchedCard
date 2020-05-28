@@ -1,0 +1,74 @@
+%!PS-Adobe-2.0 EPSF-1.2
+%%Title: PunchedCard (../Fotos/PunchedCard_EmptySample_CardCorner_Square_Uncut.eps)
+%%Creator: punchcard.sh (https://github.com/chkummer/PunchedCard)
+%%CreationDate: 28-Mai-2020
+%%BoundingBox: 0 0 541 244
+%%EndComments
+
+%%BeginProcSet
+% Outline of a punched card where no upper corners are cut
+/cardOutline
+ { newpath
+   0 0 0 setrgbcolor
+   0.25 setlinewidth
+   0 0 moveto
+   531 0 rlineto
+   0 234 rlineto
+   -531  0 rlineto
+   0 -234 rlineto
+   closepath
+   stroke } def
+
+/Pos 0 def
+/Hole 0 def
+
+/hole
+ { newpath moveto
+   0 0 0 setrgbcolor
+   0.25 setlinewidth
+   -1.98 -4.5 rmoveto
+   3.96 0 rlineto
+   0 9 rlineto
+   -3.96 0 rlineto
+   0 -9 rlineto
+   closepath
+   stroke } def
+
+/punchHole
+ { /XPos Pos 6.264 mul 11.808 add def
+   XPos [180 162 144 126 108 90 72 54 36 18 0 198 218] Hole get hole } def
+
+/printLayout
+   {
+   } def
+
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def
+
+/printDotMatrix
+ { newpath
+   /XPos Pos 6.264 mul 9 add def
+   0.5 0.5 0.5 setrgbcolor
+   gsave
+   XPos 225 translate
+   6 6 scale
+   8 8 true
+   [8 0 0 8 0 0] { DotMatrixPattern } imagemask
+   grestore } bind def
+
+
+%%EndProcSet
+
+%%Page: 1
+0.5 setlinewidth
+0 1 0 setrgbcolor
+newpath
+0 0 moveto
+595 0 lineto
+595 842 lineto
+0 842 lineto
+closepath stroke
+%%Card: 1
+5 5 translate
+cardOutline
+printLayout
+showpage
