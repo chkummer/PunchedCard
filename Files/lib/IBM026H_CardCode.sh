@@ -1,4 +1,4 @@
-# IBM026HFORT_CardCode.sh: Card Code for IBM 026 H (Fortran)
+# IBM026H_CardCode.sh: Card Code for IBM 026 H (Fortran)
 #      ________________________________________________________________
 #     /+-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ ='    .)    $*    ,(
 # 12 / O           OOOOOOOOO                        OOOOOO
