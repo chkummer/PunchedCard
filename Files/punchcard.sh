@@ -6,7 +6,8 @@
 # For more inforamtion see https://github.com/chkummer/PunchedCard
 #
 # default color values using postscript rgb schema
-CUT_COLOR="1 0 0" # red
+CUT_OUTLINE_COLOR="1 0 0" # red
+CUT_HOLE_COLOR="0 0 1" # blue
 CARD_TEXT_COLOR="0 0 0" # black
 DOC_BORDER_COLOR="0 1 0" # green
 DOT_MATRIX_COLOR="0.5 0.5 0.5" # gray
@@ -36,7 +37,7 @@ OUT_PAGE_NUM=1
 OUT_CARD_NUM=1
 # get current date for CREATION_DATE
 CREATION_DATE=`date '+%d-%b-%Y'`
-# 
+#
 # Shell Functions
 #
 # USAGE: show script usage
@@ -137,7 +138,7 @@ then
         PRINTER_OUTFILE="/dev/null"
         CUTTER_OUTFILE="/dev/null"
         OUTFILE="${BASE_OUTFILE}.eps"
-    fi 
+    fi
 else
     echo "ERROR: can't read input file '${INPUT_FILE}'"
     exit 1
