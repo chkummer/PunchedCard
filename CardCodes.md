@@ -18,7 +18,7 @@ Taken from  [24 Card Punch 26 Printing Card Punch Parts Catalog](http://bitsaver
 
 ### IBM026A (Commercial)
 
-![Empty Sample of an IBM026A Card Code](Fotos/PunchedCard_Sample_CardCode_IBM026A_72dpi.png)
+![Empty Sample of an IBM026A Card Code](Fotos/PunchedCard_Sample_CardCode_IBM026A_144dpi.png)
 
 ### IBM026B
 
@@ -26,12 +26,12 @@ Taken from  [24 Card Punch 26 Printing Card Punch Parts Catalog](http://bitsaver
 
 ### IBM026H (Fortran)
 
-![Empty Sample of an IBM026H Card Code](Fotos/PunchedCard_Sample_CardCode_IBM026H_72dpi.png)
+![Empty Sample of an IBM026H Card Code](Fotos/PunchedCard_Sample_CardCode_IBM026H_144dpi.png)
 
 ## IBM029
 
-![Empty Sample of an IBM029 Card Code](Fotos/PunchedCard_Sample_CardCode_IBM029_72dpi.png)
+![Empty Sample of an IBM029 Card Code](Fotos/PunchedCard_Sample_CardCode_IBM029_144dpi.png)
 
 ## IBM029EBCD
 
-![Empty Sample of an IBM029EBCD Card Code](Fotos/PunchedCard_Sample_CardCode_IBM029EBCD_72dpi.png)
+![Empty Sample of an IBM029EBCD Card Code](Fotos/PunchedCard_Sample_CardCode_IBM029EBCD_144dpi.png)
