@@ -22,7 +22,7 @@ Taken from  [24 Card Punch 26 Printing Card Punch Parts Catalog](http://bitsaver
 
 ### IBM026B
 
-![Empty Sample of an IBM026B Card Code](Fotos/PunchedCard_Sample_CardCode_IBM026B_72dpi.png)
+![Empty Sample of an IBM026B Card Code](Fotos/PunchedCard_Sample_CardCode_IBM026B_144dpi.png)
 
 ### IBM026H (Fortran)
 
