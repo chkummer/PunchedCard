@@ -37,7 +37,7 @@
 * [columbia.edu: IBM Key Punches](http://www.columbia.edu/cu/computinghistory/keypunch.html) 
 
 ### IBM 024 / 026
-* [colubia.edu: The IBM 026 Key Punch](http://www.columbia.edu/cu/computinghistory/026.html)
+* [columia.edu: The IBM 026 Key Punch](http://www.columbia.edu/cu/computinghistory/026.html)
 * PDF: [IBM 24-26-56 Operator's Guide](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/229-3125_24-26_Operators_Guide.pdf)
 * PDF: [Reference Manual IBM 24 Card Punch and IBM 26 Printing Card Punch](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/A24-0520-3_24_26_Card_Punch_Reference_Manual_Oct1965.pdf)
 * PDF: [IBM Customer Engineering Manual of Instruction Card Punch Type 24 and Printing Card Punch Type 26](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/22-8319-0_24_26_Customer_Engineering_Preliminary_Manual_of_Instruction_1950.pdf)
@@ -58,7 +58,7 @@ Taken from  [24 Card Punch 26 Printing Card Punch Parts Catalog](http://bitsaver
 |  340949 |   E    | -  |  / |  &  |  #  |   .    |   ???  |   ,   |  >  |   <    |   *    |   %   | 
 |  340950 |   G    | +  |  - |  /  |  +  |   .    |    $   |   ,   |  -  |   ¤    |   *    |   %   | 
 |  341097 |   F    | +  |  - |  /  |  =  |   .    |    $   |   ,   |  -  |   )    |   *    |   (   | 
-|  362277 |   H    | +  |  - |  /  |  =  |   .    |    $   |   ,   | ??? |   )    |   *    |   (   | 
+|  362277 |   H    | +  |  - |  /  |  =  |   .    |    $   |   ,   |  '  |   )    |   *    |   (   | 
 |  362276 |   A    | &  |  - |  /  |  #  |   .    |    $   |   ,   |  @  |   ¤    |   *    |   %   | 
 
 ### IBM 029
