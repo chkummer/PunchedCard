@@ -22,7 +22,7 @@ cat <<=EPS_HEADER_EOF=
 # EPS_INIT_PAGE
 #
 EPS_INIT_PAGE () {
-cat <<=EPS_INIT_PAGE_EOF= 
+cat <<=EPS_INIT_PAGE_EOF=
 
 %%Page: ${OUT_PAGE_NUM}
 0.5 setlinewidth
@@ -47,7 +47,7 @@ cat <<=EPS_CUTTER_FUNCTS_EOF=
 
 /hole
  { newpath moveto
-   ${CUT_COLOR} setrgbcolor
+   ${CUT_HOLE_COLOR} setrgbcolor
    0.25 setlinewidth
    -1.98 -4.5 rmoveto
    3.96 0 rlineto
@@ -86,4 +86,3 @@ cat <<=EPS_PRINTER_FUNCTS_EOF=
 
 =EPS_PRINTER_FUNCTS_EOF=
 }
-
