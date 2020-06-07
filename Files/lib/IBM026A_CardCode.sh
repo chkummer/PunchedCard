@@ -1,8 +1,8 @@
-# IBM026A_CardCode.sh: Card Code for IBM 026 A (Commercial)
+# IBM026A_CardCode.sh: Card Code for IBM 026 A (Commercial) Code Plate Part-No: 312047
 #      ________________________________________________________________
 #     /&-0123456789ABCDEFGHIJKLMNOPQR/STUVWXYZ #@    .¤    $*    ,%
-#  Y / O           OOOOOOOOO                        OOOOOO
-#  X|   O                   OOOOOOOOO                     OOOOOO
+# 12 / O           OOOOOOOOO                        OOOOOO
+# 11|   O                   OOOOOOOOO                     OOOOOO
 #  0|    O                           OOOOOOOOO      ?     ?     OOOOOO
 #  1|     O        O        O        O
 #  2|      O        O        O        O       O     ?     ?     O
