@@ -1,0 +1,388 @@
+%!PS-Adobe-2.0 EPSF-1.2
+%%Title: PunchedCard (PunchedCard_EmptySample_CardCorner_Left.eps)
+%%Creator: punchcard.sh (https://github.com/chkummer/PunchedCard)
+%%CreationDate: 18-Mär-2020
+%%BoundingBox: 0 0 611 304
+%%EndComments
+
+%%BeginProcSet
+% Outline of a punched card where the upper left corner was cut
+/cardOutline
+ { newpath
+   0 0 0 setrgbcolor
+   1.5 setlinewidth
+   18 0 moveto
+   495 0 rlineto
+   513 18 18 270 360 arc
+   0 198 rlineto
+   513 216 18 0 90 arc
+   -495  0 rlineto
+   -18 -31.176 rlineto
+   0 -184.824 rlineto
+   18 18 18 180 270 arc
+   closepath
+   stroke } def
+
+/Pos 0 def
+/Hole 0 def
+
+/hole
+ { newpath moveto
+   0 0 0 setrgbcolor
+   0.25 setlinewidth
+   -1.98 -4.5 rmoveto
+   3.96 0 rlineto
+   0 9 rlineto
+   -3.96 0 rlineto
+   0 -9 rlineto
+   closepath
+   gsave
+   fill
+   grestore } def
+
+/punchHole
+ { /XPos Pos 6.264 mul 11.808 add def
+   XPos [180 162 144 126 108 90 72 54 36 18 0 198 216] Hole get hole } def
+
+/printLayout
+   {
+   } def
+
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def
+
+/printDotMatrix
+ { newpath
+   /XPos Pos 6.264 mul 9 add def
+   0.5 0.5 0.5 setrgbcolor
+   gsave
+   XPos 225 translate
+   6 6 scale
+   8 8 true
+   [8 0 0 8 0 0] { DotMatrixPattern } imagemask
+   grestore } bind def
+
+/centreshow
+ { /mystring exch def
+   mystring stringwidth pop -2 div 0 rmoveto
+   mystring show } def
+
+%%EndProcSet
+
+%%Page: 1
+%%Card: 1
+35 35 translate
+cardOutline
+printLayout
+% Char: 'C'
+/Pos 73 def
+[12 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 40 40 40 44 38> def printDotMatrix
+% Char: 'A'
+/Pos 74 def
+[12 1] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 7C 44 44 28 10> def printDotMatrix
+% Char: 'R'
+/Pos 75 def
+[11 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 48 50 78 44 44 78> def printDotMatrix
+% Char: 'D'
+/Pos 76 def
+[12 4] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 78 24 24 24 24 24 78> def printDotMatrix
+% Char: '4'
+/Pos 78 def
+[4] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 08 08 7C 48 28 18 08> def printDotMatrix
+% Char: '2'
+/Pos 79 def
+[2] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 38 04 44 38> def printDotMatrix
+
+% start dimensions
+0 0 0 setrgbcolor
+0.5 setlinewidth
+2 setlinejoin
+/Helvetica findfont
+10 scalefont setfont
+305.5 250 moveto
+(All dimensions are in Postscript Points) centreshow
+/Helvetica-Narrow findfont
+8 scalefont setfont
+% width dimension
+newpath
+0 18 moveto
+0 -48 rlineto
+stroke
+newpath
+531 18 moveto
+0 -48 rlineto
+stroke
+0 -20 moveto
+531 0 rlineto
+stroke
+5 -22 moveto
+-5 2 rlineto
+5 2 rlineto
+stroke
+526 -22 moveto
+5 2 rlineto
+-5 2 rlineto
+stroke
+265 -30 moveto
+(531pt) centreshow
+% height dimension
+513 0 moveto
+48 0 rlineto
+stroke
+513 234 moveto
+48 0 rlineto
+stroke
+551 0 moveto
+0 234 rlineto
+stroke
+549 5 moveto
+2 -5 rlineto
+2 5 rlineto
+stroke
+549 229 moveto
+2 5 rlineto
+2 -5 rlineto
+stroke
+553 110 moveto
+(234pt) show
+% radius
+18 18 moveto
+-9 -15 rlineto
+stroke
+14 8 moveto
+-5 -5 rlineto
+2 7 rlineto
+stroke
+18 6 moveto
+(r = 18pt) show
+% corner cut
+0 202.824 moveto
+0 51.176 rlineto
+stroke
+18 234 moveto
+0 20 rlineto
+stroke
+0 248 moveto
+18 0 rlineto
+stroke
+5 246 moveto
+-5 2 rlineto
+5 2 rlineto
+stroke
+13 246 moveto
+5 2 rlineto
+-5 2 rlineto
+stroke
+9 258 moveto
+(18pt) centreshow
+0 202.824 moveto
+35 0 rlineto
+stroke
+30 202.824 moveto
+0 31.176 rlineto
+stroke
+28 207.824 moveto
+2 -5 rlineto
+2 5 rlineto
+stroke
+28 229 moveto
+2 5 rlineto
+2 -5 rlineto
+stroke
+32 214.412 moveto
+(31.176pt) show
+% grid
+430 216 moveto
+95 0 rlineto
+stroke
+430 198 moveto
+95 0 rlineto
+stroke
+450 180 moveto
+75 0 rlineto
+stroke
+450 162 moveto
+75 0 rlineto
+stroke
+450 144 moveto
+75 0 rlineto
+stroke
+450 126 moveto
+75 0 rlineto
+stroke
+450 108 moveto
+75 0 rlineto
+stroke
+450 90 moveto
+75 0 rlineto
+stroke
+450 72 moveto
+75 0 rlineto
+stroke
+450 54 moveto
+75 0 rlineto
+stroke
+450 36 moveto
+75 0 rlineto
+stroke
+450 18 moveto
+75 0 rlineto
+stroke
+456.552 11 moveto
+0 243 rlineto
+stroke
+462.816 11 moveto
+0 243 rlineto
+stroke
+469.08 11 moveto
+0 214 rlineto
+stroke
+475.344 11 moveto
+0 214 rlineto
+stroke
+481.608 11 moveto
+0 214 rlineto
+stroke
+487.872 11 moveto
+0 214 rlineto
+stroke
+494.136 11 moveto
+0 214 rlineto
+stroke
+500.4 11 moveto
+0 214 rlineto
+stroke
+506.664 11 moveto
+0 214 rlineto
+stroke
+512.928 11 moveto
+0 243 rlineto
+stroke
+531 216 moveto
+0 38 rlineto
+stroke
+512.664 248 moveto
+18.072 0 rlineto
+stroke
+517.664 246 moveto
+-5 2 rlineto
+5 2 rlineto
+stroke
+526 246 moveto
+5 2 rlineto
+-5 2 rlineto
+stroke
+521.964 258 moveto
+(18.072pt) centreshow
+446.552 248 moveto
+26.264 0 rlineto
+stroke
+451.552 246 moveto
+5 2 rlineto
+-5 2 rlineto
+stroke
+467.816 246 moveto
+-5 2 rlineto
+5 2 rlineto
+stroke
+459.684 258 moveto
+(6.264pt)centreshow
+440 198 moveto
+0 36 rlineto
+stroke
+438 203 moveto
+2 -5 rlineto
+2 5 rlineto
+stroke
+438 211 moveto
+2 5 rlineto
+2 -5 rlineto
+stroke
+425 204 moveto
+(18pt) show
+438 221 moveto
+2 -5 rlineto
+2 5 rlineto
+stroke
+438 229 moveto
+2 5 rlineto
+2 -5 rlineto
+stroke
+425 222 moveto
+(18pt) show
+%hole detail
+1 setlinewidth
+477.08 126 moveto
+469.08 126 8 0 360 arc
+stroke
+380 126 moveto
+300 126 80 0 360 arc
+stroke
+380 126 moveto
+81.08 0 rlineto
+stroke
+451.08 122 moveto
+10 4 rlineto
+-10 4 rlineto
+stroke
+265 126 moveto
+70 0 rlineto
+stroke
+300 66 moveto
+0 120 rlineto
+stroke
+1.5 setlinewidth
+newpath
+280.6 81 moveto
+39.6 0 rlineto
+0 90 rlineto
+-39.6 0 rlineto
+0 -90 rlineto
+closepath
+stroke
+0.5 setlinewidth
+255.6 81 moveto
+24 0 rlineto
+stroke
+255.6 171 moveto
+24 0 rlineto
+stroke
+261.6 81 moveto
+0 90 rlineto
+stroke
+259.6 86 moveto
+2 -5 rlineto
+2 5 rlineto
+stroke
+259.6 166 moveto
+2 5 rlineto
+2 -5 rlineto
+stroke
+250 122 moveto
+(9pt) centreshow
+280.6 171 moveto
+0 24 rlineto
+stroke
+320.2 171 moveto
+0 24 rlineto
+stroke
+280.6 190 moveto
+39.6 0 rlineto
+stroke
+285.6 188 moveto
+-5 2 rlineto
+5 2 rlineto
+stroke
+315.2 188 moveto
+5 2 rlineto
+-5 2 rlineto
+stroke
+300.4 194 moveto
+(3.96pt) centreshow
+
+showpage

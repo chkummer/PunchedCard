@@ -34,7 +34,7 @@
 
 ## IBM Keypunches
 
-* [columbia.edu: IBM Key Punches](http://www.columbia.edu/cu/computinghistory/keypunch.html) 
+* [columbia.edu: IBM Key Punches](http://www.columbia.edu/cu/computinghistory/keypunch.html)
 
 ### IBM 024 / 026
 * [columia.edu: The IBM 026 Key Punch](http://www.columbia.edu/cu/computinghistory/026.html)
@@ -51,15 +51,15 @@ Taken from  [24 Card Punch 26 Printing Card Punch Parts Catalog](http://bitsaver
 
 | Part No | Option | 12 | 11 | 0-1 | 8-3 | 12-8-3 | 11-8-3 | 0-8-3 | 8-4 | 12-8-4 | 11-8-4 | 0-8-4 |
 |--------:|:------:|:--:|:--:|:---:|:---:|:------:|:------:|:-----:|:---:|:------:|:------:|:-----:|
-|  312047 |   A    | &  |  - |  /  |  #  |   .    |    $   |   ,   |  @  |   ¤    |   *    |   %   | 
-|  313334 |   B    | /  |  - |  &  |  #  |   .    |    $   |   ,   |  @  |   ¤    |   *    |   %   | 
-|  313335 |   C    | &  |  - |  0  |  #  |   .    |    $   |   ,   |  @  |   ¤    |   *    |   %   | 
-|  313336 |   D    | -  |  - |  /  |  #  |   .    |    $   |   ,   |  @  |   ¤    |   *    |   %   | 
-|  340949 |   E    | -  |  / |  &  |  #  |   .    |   ???  |   ,   |  >  |   <    |   *    |   %   | 
-|  340950 |   G    | +  |  - |  /  |  +  |   .    |    $   |   ,   |  -  |   ¤    |   *    |   %   | 
-|  341097 |   F    | +  |  - |  /  |  =  |   .    |    $   |   ,   |  -  |   )    |   *    |   (   | 
-|  362277 |   H    | +  |  - |  /  |  =  |   .    |    $   |   ,   |  '  |   )    |   *    |   (   | 
-|  362276 |   A    | &  |  - |  /  |  #  |   .    |    $   |   ,   |  @  |   ¤    |   *    |   %   | 
+|  312047 |   A    | &  |  - |  /  |  #  |   .    |    $   |   ,   |  @  |   ¤    |   *    |   %   |
+|  313334 |   B    | /  |  - |  &  |  #  |   .    |    $   |   ,   |  @  |   ¤    |   *    |   %   |
+|  313335 |   C    | &  |  - |  0  |  #  |   .    |    $   |   ,   |  @  |   ¤    |   *    |   %   |
+|  313336 |   D    | -  |  - |  /  |  #  |   .    |    $   |   ,   |  @  |   ¤    |   *    |   %   |
+|  340949 |   E    | -  |  / |  &  |  #  |   .    |   ???  |   ,   |  >  |   <    |   *    |   %   |
+|  340950 |   G    | +  |  - |  /  |  +  |   .    |    $   |   ,   |  -  |   ¤    |   *    |   %   |
+|  341097 |   F    | +  |  - |  /  |  =  |   .    |    $   |   ,   |  -  |   )    |   *    |   (   |
+|  362277 |   H    | +  |  - |  /  |  =  |   .    |    $   |   ,   |  '  |   )    |   *    |   (   |
+|  362276 |   A    | &  |  - |  /  |  #  |   .    |    $   |   ,   |  @  |   ¤    |   *    |   %   |
 
 ### IBM 029
 * [colubia.edu: The IBM 029 Key Punch](http://www.columbia.edu/cu/computinghistory/029.html)
@@ -118,10 +118,6 @@ Taken from [Parts Catalog IBM 129 Card Data Recorder Models 1-3](http://bitsaver
 | 8110399 | Code Plate, Portugal                      |
 | 8112110 | Code Plate, Brazil                        |
 
-## Standards:
-* ANSI INCITS 21-1967 (R2002): Rectangular Holes in Twelve-Row Punched 
-* ISO 1681:1973(en): Information processing - Unpunched paper cards - Specification
-* ISO 6586:1980(en): Data processing — Implementation of the ISO 7- bit and 8- bit coded character sets on punched cards
 
 ## Other Punch Card Services and Software:
 * [Cardpunch: punch a punched card](http://www.kloth.net/services/cardpunch.php)

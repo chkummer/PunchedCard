@@ -42,6 +42,7 @@ See the currently implemented [card types](CardTypes.md), [card corners](CardCor
 
 ## Hints, Tips and Tricks
 * [Align Printer and Cutter Coordinates](AlignPrinterAndCutterCoordinates.md)
+* [Card Dimensions](CardDimensions.md)
 
 ## More information about Punched Cards
 There is more information about puched cards here: [ReadMore.md](ReadMore.md)
