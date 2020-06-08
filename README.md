@@ -16,7 +16,7 @@ And a nice documetation about [Punched Card Typography — IBM 026, 029, 129](ht
 ## Script
 In order to create your own punched cards you need to have access to:
 * (Laser-)Printer
-* Laser Cutter
+* Laser Cutter or an Scan and Cut Machine (like the Borther ScanNCut)
 
 If you are a Linux or MacOSX user you may use this script without additional software. Depending on your laser cutter software or printer you may require a postscript converter such as Ghostscript on Linux, Preview on MacOSX or any other Vector Graphics Editor. Windows user may use an virtual machine running Linux or use something like [Cygwin](www.cygwin.com).
 
@@ -40,7 +40,24 @@ host:user$
 ```
 See the currently implemented [card types](CardTypes.md), [card corners](CardCorners.md) and [card codes](CardCodes.md).
 
-## Hints, Tips and Tricks
+### Sample Workflow
+Here are two examples of an workflow.
+
+#### Single output
+This might be an workflow for a single output:
+1. create input text file and process it with the script
+1. Print the multi page single file (if required: convert it first)
+1. Scan and cut it using a machine like the Brother ScanNCut
+
+#### Split output
+This might be an workflow for a split output:
+1. create input text file and process it with the script using the '-s' option to create a split output.
+1. Print the multi page single printer-file (if required: convert it first)
+1. Import the single page single cutter-file into your laser-cutter software (if required: convert it first) and cut the corresponding printed page.
+
+
+
+## Details, Hints, Tips and Tricks
 * [Align Printer and Cutter Coordinates](AlignPrinterAndCutterCoordinates.md)
 * [Card Dimensions](CardDimensions.md)
 

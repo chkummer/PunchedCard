@@ -124,10 +124,13 @@ Taken from [Parts Catalog IBM 129 Card Data Recorder Models 1-3](http://bitsaver
 * [punch-card encoding ported to Processing](https://github.com/jeffThompson/PunchCardEncoding)
 * [Virtual IBM Punch Card Data Processing](http://sims.durgadas.com/punchcards/ibm029.html)
 * [Punch Card Emulator](http://tyleregeto.com/article/punch-card-emulator)
+* [x026](http://x3270.bgp.nu/x026.html)
+* [Recovery service for your legacy data and programs](https://punchcardreader.com/)
 
 ## Some Hardware Projects:
 * [Tim Jagenberg: Punching a Card](https://tim.jagenberg.info/tag/ibm-model-029/)
 * [hackaday.io: Binary Punched Card Reader](https://hackaday.io/project/9753-binary-punched-card-reader)
 * [hackaday.io: Punched Card Reader for RC2014 Z80 Computer](https://hackaday.io/project/11772-punched-card-reader-for-rc2014-z80-computer) and subproject [Test punch card punched](https://hackaday.io/project/11772-punched-card-reader-for-rc2014-z80-computer/log/38393-test-punch-card-punched)
+* Punch Card Reader [The Hardware](http://codeincluded.blogspot.com/2012/07/punch-card-reader-hardware.html), [the Software](http://codeincluded.blogspot.com/2012/07/punchcard-reader-software.html), [the FAQ](http://codeincluded.blogspot.com/2012/08/punch-card-reader-faq.html) and the [Video](https://www.youtube.com/watch?v=LcwxW2ne-UU)
 
 [Back to README.md](README.md)
