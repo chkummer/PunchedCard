@@ -59,7 +59,7 @@ cat <<=EPS_CUTTER_FUNCTS_EOF=
 
 /punchHole
  { /XPos Pos 6.264 mul 11.808 add def
-   XPos [180 162 144 126 108 90 72 54 36 18 0 198 218] Hole get hole } def
+   XPos [180 162 144 126 108 90 72 54 36 18 0 198 216] Hole get hole } def
 
 =EPS_CUTTER_FUNCTS_EOF=
 }
