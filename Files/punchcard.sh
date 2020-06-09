@@ -27,9 +27,8 @@ SPLIT_OUTPUT=0
 BASE_OUTFILE="punchcard"
 OUTFILE="${BASE_OUTFILE}.eps"
 OUTFILE_NUM=1
-# default page size in postscript points
-OUT_PAGE_WIDTH="595" # DIN-A4=595
-OUT_PAGE_HEIGHT="842" # DIN-A4=842
+# page size (see https://www.prepressure.com/library/paper-size)
+OUT_PAGE_SIZE="A4" # DIN-A4
 # line number on input file
 INPUT_LINE_NUM=1
 # default start page number
@@ -52,6 +51,7 @@ options are:
  -C <corners>   # card corners (default: ${CARD_CORNER})
  -S             # change from round to square corners
  -t <type>      # card type (default: ${CARD_TYPE})
+ -p <pagesize>  # set output pagesize (default: ${OUT_PAGE_SIZE})
  -o <outfile>   # output base file name (default: ${BASE_OUTFILE})
  -s             # split output
  -h             # this help text
@@ -104,15 +104,16 @@ fi
 #
 # Main
 #
-while getopts i:c:C:t:o:Ssh option
+while getopts i:c:C:t:o:p:Ssh option
 do
     case "${option}" in
         i) INPUT_FILE=${OPTARG};;
         c) CARD_CODE=${OPTARG};;
         C) CARD_CORNER=${OPTARG};;
-	S) CARD_OUTLINE="Square";;
+        S) CARD_OUTLINE="Square";;
         t) CARD_TYPE=${OPTARG};;
         o) BASE_OUTFILE=${OPTARG};;
+        p) OUT_PAGE_SIZE=${OPTARG};;
         s) SPLIT_OUTPUT=1;;
         h) USAGE;;
     esac
@@ -178,6 +179,24 @@ then
     done
     exit 1
 fi
+case ${OUT_PAGE_SIZE} in
+    'A4')
+        OUT_PAGE_WIDTH="595"
+        OUT_PAGE_HEIGHT="842"
+        ;;
+    'Letter')
+        OUT_PAGE_WIDTH="612"
+        OUT_PAGE_HEIGHT="792"
+        ;;
+    'Legal')
+        OUT_PAGE_WIDTH="612"
+        OUT_PAGE_HEIGHT="1008"
+        ;;
+    *)
+        echo "Page size '${OUT_PAGE_SIZE}' not supported! (use: 'A4', 'Letter' or 'Legal')"
+        exit 2
+        ;;
+esac
 #
 # all required files are available; let's go and create some output
 #

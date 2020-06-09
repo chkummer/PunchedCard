@@ -32,13 +32,14 @@ options are:
  -C <corners>   # card corners (default: Left)
  -S             # change from round to square corners
  -t <type>      # card type (default: IBM5081)
+ -p <pagesize>  # set output pagesize (default: A4)
  -o <outfile>   # output base file name (default: punchcard)
  -s             # split output
  -h             # this help text
 
 host:user$
 ```
-See the currently implemented [card types](CardTypes.md), [card corners](CardCorners.md) and [card codes](CardCodes.md).
+See the currently implemented [card types](CardTypes.md), [card corners](CardCorners.md) and [card codes](CardCodes.md). You may use 'A4', 'Letter' or 'Legal' as page size.
 
 ### Sample Workflow
 Here are two examples of an workflow.
