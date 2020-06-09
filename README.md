@@ -35,6 +35,7 @@ options are:
  -p <pagesize>  # set output pagesize (default: A4)
  -o <outfile>   # output base file name (default: punchcard)
  -s             # split output
+ -D             # output is for documentation
  -h             # this help text
 
 host:user$

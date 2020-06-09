@@ -40,6 +40,12 @@ closepath stroke
 # EPS_CUTTER_FUNCTS
 #
 EPS_CUTTER_FUNCTS () {
+if [ ${DOCU_FLAG} -eq 1 ]
+then
+    TMP_PS_CMD="gsave fill grestore"
+else
+    TMP_PS_CMD="stroke"
+fi
 eval "sed 's/@@CUT_OUTLINE_COLOR@@/${CUT_OUTLINE_COLOR}/g;s/@@CUT_HOLE_COLOR@@/${CUT_HOLE_COLOR}/g' lib/${CARD_OUTLINE}_${CARD_CORNER}_CardOutline.ps"
 cat <<=EPS_CUTTER_FUNCTS_EOF=
 /Pos 0 def
@@ -55,7 +61,7 @@ cat <<=EPS_CUTTER_FUNCTS_EOF=
    -3.96 0 rlineto
    0 -9 rlineto
    closepath
-   stroke } def
+   ${TMP_PS_CMD} } def
 
 /punchHole
  { /XPos Pos 6.264 mul 11.808 add def

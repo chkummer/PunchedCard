@@ -34,6 +34,8 @@ INPUT_LINE_NUM=1
 # default start page number
 OUT_PAGE_NUM=1
 OUT_CARD_NUM=1
+# output for documentation flag
+DOCU_FLAG=0
 # get current date for CREATION_DATE
 CREATION_DATE=`date '+%d-%b-%Y'`
 #
@@ -54,6 +56,7 @@ options are:
  -p <pagesize>  # set output pagesize (default: ${OUT_PAGE_SIZE})
  -o <outfile>   # output base file name (default: ${BASE_OUTFILE})
  -s             # split output
+ -D             # output is for documentation
  -h             # this help text
 
 =USAGE_EOF=
@@ -82,12 +85,17 @@ then
     fi
 fi
 echo "%%Card: ${OUT_CARD_NUM}" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
-CARD_NUM_ON_PAGE=$(( ${OUT_CARD_NUM} % 3 ))
-case ${CARD_NUM_ON_PAGE} in
-    1)    echo "30 520 translate" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null;;
-    2)    echo "0 -245 translate" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null;;
-    0)    echo "0 -245 translate" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null;;
-esac
+if [ ${DOCU_FLAG} -eq 1 ]
+then
+    echo "5 5 translate" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+else
+    CARD_NUM_ON_PAGE=$(( ${OUT_CARD_NUM} % 3 ))
+    case ${CARD_NUM_ON_PAGE} in
+        1)    echo "30 520 translate" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null;;
+        2)    echo "0 -245 translate" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null;;
+        0)    echo "0 -245 translate" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null;;
+    esac
+fi
 echo "cardOutline" | tee -a ${OUTFILE} ${CUTTER_OUTFILE} >/dev/null
 echo "printLayout" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} >/dev/null
 }
@@ -104,7 +112,7 @@ fi
 #
 # Main
 #
-while getopts i:c:C:t:o:p:Ssh option
+while getopts i:c:C:t:o:p:DSsh option
 do
     case "${option}" in
         i) INPUT_FILE=${OPTARG};;
@@ -115,6 +123,7 @@ do
         o) BASE_OUTFILE=${OPTARG};;
         p) OUT_PAGE_SIZE=${OPTARG};;
         s) SPLIT_OUTPUT=1;;
+        D) DOCU_FLAG=1;;
         h) USAGE;;
     esac
 done
@@ -197,6 +206,15 @@ case ${OUT_PAGE_SIZE} in
         exit 2
         ;;
 esac
+if [ ${DOCU_FLAG} -eq 1 ]
+then
+    CUT_HOLE_COLOR="0 0 0"
+    CUT_OUTLINE_COLOR="0 0 0"
+    DOC_BORDER_COLOR="1 1 1"
+    OUT_PAGE_WIDTH="541"
+    OUT_PAGE_HEIGHT="244"
+    SPLIT_OUTPUT=0
+fi
 #
 # all required files are available; let's go and create some output
 #
