@@ -36,6 +36,8 @@ OUT_PAGE_NUM=1
 OUT_CARD_NUM=1
 # output for documentation flag
 DOCU_FLAG=0
+# input fromat / 0=text / 1=image
+INPUT_FORMAT=0
 # get current date for CREATION_DATE
 CREATION_DATE=`date '+%d-%b-%Y'`
 #
@@ -48,7 +50,8 @@ cat <<=USAGE_EOF=
 usage: $0 [options]
 
 options are:
- -i <file>      # input file name
+ -i <file>      # input file name containing text
+ -I <file>      # input file name containing image
  -c <code>      # card coding (default: ${CARD_CODE})
  -C <corners>   # card corners (default: ${CARD_CORNER})
  -S             # change from round to square corners
@@ -100,6 +103,51 @@ echo "cardOutline" | tee -a ${OUTFILE} ${CUTTER_OUTFILE} >/dev/null
 echo "printLayout" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} >/dev/null
 }
 #
+# PROCESS_TEXT: processing text input file
+#
+PROCESS_TEXT () {
+  cat ${INPUT_FILE} | while read INPUT_LINE || [[ -n ${INPUT_LINE} ]];
+  do
+      INIT_CARD
+      INPUT_LEN=`expr ${#INPUT_LINE} - 1`
+      INPUT_POS=0
+      while [ ${INPUT_POS} -le ${INPUT_LEN} ]
+      do
+          CURR_CHAR=${INPUT_LINE:${INPUT_POS}:1}
+          CONVERT_CHAR
+          echo "% Char: '${CURR_CHAR}'" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+          echo "/Pos `expr ${INPUT_POS} + 1` def" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+          echo "[${HOLES}] { /Hole exch def punchHole } forall" | tee -a ${OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+          echo "/DotMatrixPattern <${DOT_MATRIX}> def printDotMatrix" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} >/dev/null
+          INPUT_POS=`expr ${INPUT_POS} + 1`
+          if [ ${INPUT_POS} -eq 80 ]
+          then
+              echo "WARNING: line: '${INPUT_LINENUM}' is too long, ignoring rest of line"
+              INPUT_POS=`expr ${INPUT_LEN} + 1`
+          fi
+      done
+      INPUT_LINENUM=`expr ${INPUT_LINENUM} + 1`
+      OUT_CARD_NUM=`expr ${OUT_CARD_NUM} + 1`
+  done
+}
+PROCESS_IMAGE () {
+  INIT_CARD
+  cat ${INPUT_FILE} | while read INPUT_LINE || [[ -n ${INPUT_LINE} ]];
+  do
+    if [ "${INPUT_LINE}" = "NC" ]
+    then
+      OUT_CARD_NUM=`expr ${OUT_CARD_NUM} + 1`
+      INIT_CARD
+    else
+      INPUT_POS=`echo ${INPUT_LINE} | awk -F : '{print $1}'`
+      HOLES=`echo ${INPUT_LINE} | awk -F : '{print $2}'`
+      echo "% Image-Input-Line: '${CURR_CHAR}'" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+      echo "/Pos ${INPUT_POS} def" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+      echo "[${HOLES}] { /Hole exch def punchHole } forall" | tee -a ${OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+    fi
+  done
+}
+#
 # checking for EPS Functions
 #
 if [ -r lib/EPS_Functions.sh ]
@@ -112,10 +160,11 @@ fi
 #
 # Main
 #
-while getopts i:c:C:t:o:p:DSsh option
+while getopts i:I:c:C:t:o:p:DSsh option
 do
     case "${option}" in
         i) INPUT_FILE=${OPTARG};;
+        I) INPUT_FORMAT=1;INPUT_FILE=${OPTARG};;
         c) CARD_CODE=${OPTARG};;
         C) CARD_CORNER=${OPTARG};;
         S) CARD_OUTLINE="Square";;
@@ -153,10 +202,12 @@ else
     echo "ERROR: can't read input file '${INPUT_FILE}'"
     exit 1
 fi
-if [ -r lib/${CARD_CODE}_CardCode.sh ]
+if [ ${INPUT_FORMAT} = 0 ]
 then
+  if [ -r lib/${CARD_CODE}_CardCode.sh ]
+  then
     . lib/${CARD_CODE}_CardCode.sh
-else
+  else
     echo "ERROR: can't read lib/${CARD_CODE}_CardCode.sh"
     CARD_CODE_LIST=`ls lib/*_CardCode.sh | sed 's?^.*lib/??g;s?_CardCode.sh??g'`
     echo "Valid Card Codes are:"
@@ -165,6 +216,7 @@ else
         echo " - ${CARD_CODE_ITEM}"
     done
     exit 1
+  fi
 fi
 if [ ! -r lib/${CARD_OUTLINE}_${CARD_CORNER}_CardOutline.ps ]
 then
@@ -224,27 +276,10 @@ EPS_PRINTER_FUNCTS | tee -a ${OUTFILE} ${PRINTER_OUTFILE} >/dev/null
 echo "%%EndProcSet" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
 EPS_INIT_PAGE | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
 # read input file
-cat ${INPUT_FILE} | while read INPUT_LINE || [[ -n ${INPUT_LINE} ]];
-do
-    INIT_CARD
-    INPUT_LEN=`expr ${#INPUT_LINE} - 1`
-    INPUT_POS=0
-    while [ ${INPUT_POS} -le ${INPUT_LEN} ]
-    do
-        CURR_CHAR=${INPUT_LINE:${INPUT_POS}:1}
-        CONVERT_CHAR
-        echo "% Char: '${CURR_CHAR}'" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
-        echo "/Pos `expr ${INPUT_POS} + 1` def" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
-        echo "[${HOLES}] { /Hole exch def punchHole } forall" | tee -a ${OUTFILE} ${CUTTER_OUTFILE} >/dev/null
-        echo "/DotMatrixPattern <${DOT_MATRIX}> def printDotMatrix" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} >/dev/null
-        INPUT_POS=`expr ${INPUT_POS} + 1`
-        if [ ${INPUT_POS} -eq 80 ]
-        then
-            echo "WARNING: line: '${INPUT_LINENUM}' is too long, ignoring rest of line"
-            INPUT_POS=`expr ${INPUT_LEN} + 1`
-        fi
-    done
-    INPUT_LINENUM=`expr ${INPUT_LINENUM} + 1`
-    OUT_CARD_NUM=`expr ${OUT_CARD_NUM} + 1`
-done
+case ${INPUT_FORMAT} in
+  0)  PROCESS_TEXT;;
+  1)  PROCESS_IMAGE;;
+  *)  echo "ERROR: unknown INPUT_FORMAT='${INPUT_FORMAT}'!";exit 1;;
+esac
+# The End
 echo "showpage" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
