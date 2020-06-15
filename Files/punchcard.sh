@@ -140,10 +140,20 @@ PROCESS_IMAGE () {
       INIT_CARD
     else
       INPUT_POS=`echo ${INPUT_LINE} | awk -F : '{print $1}'`
-      HOLES=`echo ${INPUT_LINE} | awk -F : '{print $2}'`
-      echo "% Image-Input-Line: '${CURR_CHAR}'" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
-      echo "/Pos ${INPUT_POS} def" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
-      echo "[${HOLES}] { /Hole exch def punchHole } forall" | tee -a ${OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+      if [ ${INPUT_POS} -lt 1 ] | [ ${INPUT_POS} -gt 80 ]
+      then
+        echo "WARNING: position of line: '${INPUT_LINE}' is outside the card"
+      else
+        HOLES=`echo ${INPUT_LINE} | awk -F : '{print $2}'`
+        if [ `echo ${HOLES} | tr ' ' '\012' | egrep -cv '^([0-9]|11|12)$'` -gt 0 ]
+        then
+          echo "WARNING: line: '${INPUT_LINE}' contains wrong holes"
+        else
+          echo "% Image-Input-Line: '${CURR_CHAR}'" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+          echo "/Pos ${INPUT_POS} def" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+          echo "[${HOLES}] { /Hole exch def punchHole } forall" | tee -a ${OUTFILE} ${CUTTER_OUTFILE} >/dev/null
+        fi
+      fi
     fi
   done
 }
