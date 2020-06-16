@@ -27,7 +27,8 @@ host:user$ ./punchcard.sh -h
 usage: ./punchcard.sh [options]
 
 options are:
- -i <file>      # input file name
+ -i <file>      # input file name containing text
+ -I <file>      # input file name containing image
  -c <code>      # card coding (default: IBM029)
  -C <corners>   # card corners (default: Left)
  -S             # change from round to square corners
@@ -41,6 +42,12 @@ options are:
 host:user$
 ```
 See the currently implemented [card types](CardTypes.md), [card corners](CardCorners.md) and [card codes](CardCodes.md). You may use 'A4', 'Letter' or 'Legal' as page size.
+
+#### Examples
+Here are some examples:
+* [Text Single Output](Example_Text_SingleOutput.md)
+* [Text Split Output](Example_Text_SplitOutput.md)
+* [Image Heart](Example_Image_Heart.md)
 
 ### Sample Workflow
 Here are two examples of an workflow.

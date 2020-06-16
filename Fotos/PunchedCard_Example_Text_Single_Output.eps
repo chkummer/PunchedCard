@@ -1,0 +1,850 @@
+%!PS-Adobe-2.0 EPSF-1.2
+%%Title: PunchedCard (../Fotos/PunchedCard_Example_Text_Single_Output.eps)
+%%Creator: punchcard.sh (https://github.com/chkummer/PunchedCard)
+%%CreationDate: 15-Jun-2020
+%%BoundingBox: 0 0 595 842
+%%EndComments
+
+%%BeginProcSet
+% Outline of a punched card where the upper left corner was cut
+/cardOutline
+ { newpath
+   1 0 0 setrgbcolor
+   0.25 setlinewidth
+   18 0 moveto
+   495 0 rlineto
+   513 18 18 270 360 arc
+   0 198 rlineto
+   513 216 18 0 90 arc
+   -495  0 rlineto
+   -18 -31.176 rlineto
+   0 -184.824 rlineto
+   18 18 18 180 270 arc
+   closepath
+   stroke } def
+/Pos 0 def
+/Hole 0 def
+
+/hole
+ { newpath moveto
+   0 0 1 setrgbcolor
+   0.25 setlinewidth
+   -1.98 -4.5 rmoveto
+   3.96 0 rlineto
+   0 9 rlineto
+   -3.96 0 rlineto
+   0 -9 rlineto
+   closepath
+   stroke } def
+
+/punchHole
+ { /XPos Pos 6.264 mul 11.808 add def
+   XPos [180 162 144 126 108 90 72 54 36 18 0 198 216] Hole get hole } def
+
+/centreshow 
+  { /mystring exch def
+    mystring stringwidth pop -2 div 0 rmoveto 
+    mystring show } def 
+
+/centrecompshow 
+  { /mystring exch def
+    gsave
+    0.7 1 scale
+    mystring stringwidth pop -2 div 0 rmoveto 
+    mystring show
+    grestore
+  } def 
+
+/singleCol
+  { /PosStr 2 string def
+    /XPos Pos 6.264 mul 11.5 add def
+
+    /Helvetica-Narrow findfont
+    8 scalefont setfont
+
+    XPos 15.5 moveto
+    (9) centrecompshow
+    XPos 33.5 moveto
+    (8) centrecompshow
+    XPos 51.5 moveto
+    (7) centrecompshow
+    XPos 69.5 moveto
+    (6) centrecompshow
+    XPos 87.5 moveto
+    (5) centrecompshow
+    XPos 105.5 moveto
+    (4) centrecompshow
+    XPos 123.5 moveto
+    (3) centrecompshow
+    XPos 141.5 moveto
+    (2) centrecompshow
+    XPos 159.5 moveto
+    (1) centrecompshow
+    XPos 177.5 moveto
+    (0) centrecompshow
+ 
+    /Helvetica-Narrow findfont
+    4 scalefont setfont
+
+    XPos 170 moveto
+    Pos PosStr cvs centreshow
+    XPos 8 moveto
+    Pos PosStr cvs centreshow } def
+
+/printLayout
+ { /Pos 1 def
+   0 0 0 setrgbcolor
+   { 
+     Pos singleCol
+     /Pos Pos 1 add def
+     Pos 80 gt
+     { exit } if
+     } loop
+   } def
+
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def
+
+/printDotMatrix
+ { newpath
+   /XPos Pos 6.264 mul 9 add def
+   0.5 0.5 0.5 setrgbcolor
+   gsave
+   XPos 225 translate
+   6 6 scale
+   8 8 true
+   [8 0 0 8 0 0] { DotMatrixPattern } imagemask
+   grestore } bind def
+
+
+%%EndProcSet
+
+%%Page: 1
+0.5 setlinewidth
+0 1 0 setrgbcolor
+newpath
+0 0 moveto
+595 0 lineto
+595 842 lineto
+0 842 lineto
+closepath stroke
+%%Card: 1
+30 520 translate
+cardOutline
+printLayout
+% Char: 'T'
+/Pos 1 def
+[0 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 10 10 7C> def printDotMatrix
+% Char: 'H'
+/Pos 2 def
+[12 8] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 44 7C 44 44 44> def printDotMatrix
+% Char: 'I'
+/Pos 3 def
+[12 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 10 10 10 10 10 38> def printDotMatrix
+% Char: 'S'
+/Pos 4 def
+[0 2] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 08 10 20 44 38> def printDotMatrix
+% Char: ' '
+/Pos 5 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'I'
+/Pos 6 def
+[12 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 10 10 10 10 10 38> def printDotMatrix
+% Char: 'S'
+/Pos 7 def
+[0 2] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 08 10 20 44 38> def printDotMatrix
+% Char: ' '
+/Pos 8 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'A'
+/Pos 9 def
+[12 1] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 7C 44 44 28 10> def printDotMatrix
+% Char: 'N'
+/Pos 10 def
+[11 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 44 4C 54 64 44> def printDotMatrix
+% Char: ' '
+/Pos 11 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'E'
+/Pos 12 def
+[12 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 78 40 40 7C> def printDotMatrix
+% Char: 'X'
+/Pos 13 def
+[0 7] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 28 10 28 44 44> def printDotMatrix
+% Char: 'A'
+/Pos 14 def
+[12 1] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 7C 44 44 28 10> def printDotMatrix
+% Char: 'M'
+/Pos 15 def
+[11 4] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 44 54 54 6C 44> def printDotMatrix
+% Char: 'P'
+/Pos 16 def
+[11 7] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 40 40 40 78 44 44 78> def printDotMatrix
+% Char: 'L'
+/Pos 17 def
+[11 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 40 40 40 40> def printDotMatrix
+% Char: 'E'
+/Pos 18 def
+[12 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 78 40 40 7C> def printDotMatrix
+% Char: ' '
+/Pos 19 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'O'
+/Pos 20 def
+[11 6] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 44 44 44 44 44 7C> def printDotMatrix
+% Char: 'F'
+/Pos 21 def
+[12 6] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 40 40 40 78 40 40 7C> def printDotMatrix
+% Char: ' '
+/Pos 22 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'U'
+/Pos 23 def
+[0 4] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 44 44 44 44 44> def printDotMatrix
+% Char: 'S'
+/Pos 24 def
+[0 2] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 08 10 20 44 38> def printDotMatrix
+% Char: 'I'
+/Pos 25 def
+[12 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 10 10 10 10 10 38> def printDotMatrix
+% Char: 'N'
+/Pos 26 def
+[11 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 44 4C 54 64 44> def printDotMatrix
+% Char: 'G'
+/Pos 27 def
+[12 7] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 3C 44 44 4C 40 40 3C> def printDotMatrix
+% Char: ' '
+/Pos 28 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'T'
+/Pos 29 def
+[0 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 10 10 7C> def printDotMatrix
+% Char: 'H'
+/Pos 30 def
+[12 8] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 44 7C 44 44 44> def printDotMatrix
+% Char: 'E'
+/Pos 31 def
+[12 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 78 40 40 7C> def printDotMatrix
+% Char: ' '
+/Pos 32 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'S'
+/Pos 33 def
+[0 2] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 08 10 20 44 38> def printDotMatrix
+% Char: 'H'
+/Pos 34 def
+[12 8] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 44 7C 44 44 44> def printDotMatrix
+% Char: 'E'
+/Pos 35 def
+[12 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 78 40 40 7C> def printDotMatrix
+% Char: 'L'
+/Pos 36 def
+[11 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 40 40 40 40> def printDotMatrix
+% Char: 'L'
+/Pos 37 def
+[11 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 40 40 40 40> def printDotMatrix
+% Char: ' '
+/Pos 38 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'S'
+/Pos 39 def
+[0 2] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 08 10 20 44 38> def printDotMatrix
+% Char: 'C'
+/Pos 40 def
+[12 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 40 40 40 44 38> def printDotMatrix
+% Char: 'R'
+/Pos 41 def
+[11 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 48 50 78 44 44 78> def printDotMatrix
+% Char: 'I'
+/Pos 42 def
+[12 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 10 10 10 10 10 38> def printDotMatrix
+% Char: 'P'
+/Pos 43 def
+[11 7] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 40 40 40 78 44 44 78> def printDotMatrix
+% Char: 'T'
+/Pos 44 def
+[0 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 10 10 7C> def printDotMatrix
+% Char: ' '
+/Pos 45 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'T'
+/Pos 46 def
+[0 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 10 10 7C> def printDotMatrix
+% Char: 'O'
+/Pos 47 def
+[11 6] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 44 44 44 44 44 7C> def printDotMatrix
+% Char: ' '
+/Pos 48 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'G'
+/Pos 49 def
+[12 7] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 3C 44 44 4C 40 40 3C> def printDotMatrix
+% Char: 'E'
+/Pos 50 def
+[12 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 78 40 40 7C> def printDotMatrix
+% Char: 'N'
+/Pos 51 def
+[11 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 44 4C 54 64 44> def printDotMatrix
+% Char: 'E'
+/Pos 52 def
+[12 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 78 40 40 7C> def printDotMatrix
+% Char: 'R'
+/Pos 53 def
+[11 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 48 50 78 44 44 78> def printDotMatrix
+% Char: 'A'
+/Pos 54 def
+[12 1] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 7C 44 44 28 10> def printDotMatrix
+% Char: 'T'
+/Pos 55 def
+[0 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 10 10 7C> def printDotMatrix
+% Char: 'E'
+/Pos 56 def
+[12 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 78 40 40 7C> def printDotMatrix
+% Char: ' '
+/Pos 57 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'F'
+/Pos 58 def
+[12 6] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 40 40 40 78 40 40 7C> def printDotMatrix
+% Char: 'R'
+/Pos 59 def
+[11 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 48 50 78 44 44 78> def printDotMatrix
+% Char: 'O'
+/Pos 60 def
+[11 6] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 44 44 44 44 44 7C> def printDotMatrix
+% Char: 'M'
+/Pos 61 def
+[11 4] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 44 54 54 6C 44> def printDotMatrix
+% Char: ' '
+/Pos 62 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'A'
+/Pos 63 def
+[12 1] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 7C 44 44 28 10> def printDotMatrix
+% Char: ' '
+/Pos 64 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'T'
+/Pos 65 def
+[0 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 10 10 7C> def printDotMatrix
+% Char: 'E'
+/Pos 66 def
+[12 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 78 40 40 7C> def printDotMatrix
+% Char: 'X'
+/Pos 67 def
+[0 7] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 28 10 28 44 44> def printDotMatrix
+% Char: 'T'
+/Pos 68 def
+[0 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 10 10 7C> def printDotMatrix
+% Char: ' '
+/Pos 69 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'F'
+/Pos 70 def
+[12 6] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 40 40 40 78 40 40 7C> def printDotMatrix
+% Char: 'I'
+/Pos 71 def
+[12 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 10 10 10 10 10 38> def printDotMatrix
+% Char: 'L'
+/Pos 72 def
+[11 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 40 40 40 40> def printDotMatrix
+% Char: 'E'
+/Pos 73 def
+[12 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 78 40 40 7C> def printDotMatrix
+%%Card: 2
+0 -245 translate
+cardOutline
+printLayout
+% Char: 'T'
+/Pos 1 def
+[0 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 10 10 7C> def printDotMatrix
+% Char: 'O'
+/Pos 2 def
+[11 6] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 44 44 44 44 44 7C> def printDotMatrix
+% Char: ' '
+/Pos 3 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'A'
+/Pos 4 def
+[12 1] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 7C 44 44 28 10> def printDotMatrix
+% Char: ' '
+/Pos 5 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'S'
+/Pos 6 def
+[0 2] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 08 10 20 44 38> def printDotMatrix
+% Char: 'I'
+/Pos 7 def
+[12 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 10 10 10 10 10 38> def printDotMatrix
+% Char: 'N'
+/Pos 8 def
+[11 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 44 4C 54 64 44> def printDotMatrix
+% Char: 'G'
+/Pos 9 def
+[12 7] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 3C 44 44 4C 40 40 3C> def printDotMatrix
+% Char: 'L'
+/Pos 10 def
+[11 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 40 40 40 40> def printDotMatrix
+% Char: 'E'
+/Pos 11 def
+[12 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 78 40 40 7C> def printDotMatrix
+% Char: ' '
+/Pos 12 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'P'
+/Pos 13 def
+[11 7] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 40 40 40 78 44 44 78> def printDotMatrix
+% Char: 'O'
+/Pos 14 def
+[11 6] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 44 44 44 44 44 7C> def printDotMatrix
+% Char: 'S'
+/Pos 15 def
+[0 2] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 08 10 20 44 38> def printDotMatrix
+% Char: 'T'
+/Pos 16 def
+[0 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 10 10 7C> def printDotMatrix
+% Char: 'S'
+/Pos 17 def
+[0 2] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 08 10 20 44 38> def printDotMatrix
+% Char: 'C'
+/Pos 18 def
+[12 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 40 40 40 44 38> def printDotMatrix
+% Char: 'R'
+/Pos 19 def
+[11 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 48 50 78 44 44 78> def printDotMatrix
+% Char: 'I'
+/Pos 20 def
+[12 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 10 10 10 10 10 38> def printDotMatrix
+% Char: 'P'
+/Pos 21 def
+[11 7] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 40 40 40 78 44 44 78> def printDotMatrix
+% Char: 'T'
+/Pos 22 def
+[0 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 10 10 7C> def printDotMatrix
+% Char: ' '
+/Pos 23 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'O'
+/Pos 24 def
+[11 6] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 44 44 44 44 44 7C> def printDotMatrix
+% Char: 'U'
+/Pos 25 def
+[0 4] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 44 44 44 44 44> def printDotMatrix
+% Char: 'T'
+/Pos 26 def
+[0 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 10 10 7C> def printDotMatrix
+% Char: 'P'
+/Pos 27 def
+[11 7] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 40 40 40 78 44 44 78> def printDotMatrix
+% Char: 'U'
+/Pos 28 def
+[0 4] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 44 44 44 44 44> def printDotMatrix
+% Char: 'T'
+/Pos 29 def
+[0 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 10 10 7C> def printDotMatrix
+% Char: ' '
+/Pos 30 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'F'
+/Pos 31 def
+[12 6] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 40 40 40 78 40 40 7C> def printDotMatrix
+% Char: 'I'
+/Pos 32 def
+[12 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 10 10 10 10 10 38> def printDotMatrix
+% Char: 'L'
+/Pos 33 def
+[11 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 40 40 40 40> def printDotMatrix
+% Char: 'E'
+/Pos 34 def
+[12 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 78 40 40 7C> def printDotMatrix
+% Char: ' '
+/Pos 35 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'W'
+/Pos 36 def
+[0 6] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 6C 54 44 44 44 44> def printDotMatrix
+% Char: 'H'
+/Pos 37 def
+[12 8] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 44 7C 44 44 44> def printDotMatrix
+% Char: 'E'
+/Pos 38 def
+[12 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 78 40 40 7C> def printDotMatrix
+% Char: 'R'
+/Pos 39 def
+[11 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 48 50 78 44 44 78> def printDotMatrix
+% Char: 'E'
+/Pos 40 def
+[12 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 78 40 40 7C> def printDotMatrix
+% Char: ' '
+/Pos 41 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'E'
+/Pos 42 def
+[12 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 78 40 40 7C> def printDotMatrix
+% Char: 'V'
+/Pos 43 def
+[0 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 28 28 44 44 44> def printDotMatrix
+% Char: 'E'
+/Pos 44 def
+[12 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 78 40 40 7C> def printDotMatrix
+% Char: 'R'
+/Pos 45 def
+[11 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 48 50 78 44 44 78> def printDotMatrix
+% Char: 'Y'
+/Pos 46 def
+[0 8] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 28 44 44> def printDotMatrix
+% Char: ' '
+/Pos 47 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'L'
+/Pos 48 def
+[11 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 40 40 40 40> def printDotMatrix
+% Char: 'I'
+/Pos 49 def
+[12 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 10 10 10 10 10 38> def printDotMatrix
+% Char: 'N'
+/Pos 50 def
+[11 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 44 4C 54 64 44> def printDotMatrix
+% Char: 'E'
+/Pos 51 def
+[12 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 78 40 40 7C> def printDotMatrix
+% Char: ' '
+/Pos 52 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'I'
+/Pos 53 def
+[12 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 10 10 10 10 10 38> def printDotMatrix
+% Char: 'S'
+/Pos 54 def
+[0 2] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 08 10 20 44 38> def printDotMatrix
+% Char: ' '
+/Pos 55 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'A'
+/Pos 56 def
+[12 1] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 7C 44 44 28 10> def printDotMatrix
+% Char: 'N'
+/Pos 57 def
+[11 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 44 4C 54 64 44> def printDotMatrix
+% Char: 'O'
+/Pos 58 def
+[11 6] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 44 44 44 44 44 7C> def printDotMatrix
+% Char: 'T'
+/Pos 59 def
+[0 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 10 10 7C> def printDotMatrix
+% Char: 'H'
+/Pos 60 def
+[12 8] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 44 7C 44 44 44> def printDotMatrix
+% Char: 'E'
+/Pos 61 def
+[12 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 78 40 40 7C> def printDotMatrix
+% Char: 'R'
+/Pos 62 def
+[11 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 48 50 78 44 44 78> def printDotMatrix
+% Char: ' '
+/Pos 63 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'C'
+/Pos 64 def
+[12 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 40 40 40 44 38> def printDotMatrix
+% Char: 'A'
+/Pos 65 def
+[12 1] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 7C 44 44 28 10> def printDotMatrix
+% Char: 'R'
+/Pos 66 def
+[11 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 48 50 78 44 44 78> def printDotMatrix
+% Char: 'D'
+/Pos 67 def
+[12 4] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 78 24 24 24 24 24 78> def printDotMatrix
+%%Card: 3
+0 -245 translate
+cardOutline
+printLayout
+% Char: 'I'
+/Pos 1 def
+[12 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 10 10 10 10 10 38> def printDotMatrix
+% Char: 'S'
+/Pos 2 def
+[0 2] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 08 10 20 44 38> def printDotMatrix
+% Char: 'N'
+/Pos 3 def
+[11 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 44 4C 54 64 44> def printDotMatrix
+% Char: '''
+/Pos 4 def
+[8 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 30 30 30> def printDotMatrix
+% Char: 'T'
+/Pos 5 def
+[0 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 10 10 7C> def printDotMatrix
+% Char: ' '
+/Pos 6 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'T'
+/Pos 7 def
+[0 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 10 10 7C> def printDotMatrix
+% Char: 'H'
+/Pos 8 def
+[12 8] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 44 44 7C 44 44 44> def printDotMatrix
+% Char: 'I'
+/Pos 9 def
+[12 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 10 10 10 10 10 38> def printDotMatrix
+% Char: 'S'
+/Pos 10 def
+[0 2] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 08 10 20 44 38> def printDotMatrix
+% Char: ' '
+/Pos 11 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'C'
+/Pos 12 def
+[12 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 40 40 40 44 38> def printDotMatrix
+% Char: 'O'
+/Pos 13 def
+[11 6] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 44 44 44 44 44 7C> def printDotMatrix
+% Char: 'O'
+/Pos 14 def
+[11 6] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 44 44 44 44 44 7C> def printDotMatrix
+% Char: 'L'
+/Pos 15 def
+[11 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 40 40 40 40> def printDotMatrix
+% Char: '?'
+/Pos 16 def
+[0 8 7] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 00 10 10 08 48 30> def printDotMatrix
+% Char: ' '
+/Pos 17 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'J'
+/Pos 18 def
+[11 1] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 04 04 04 04 04> def printDotMatrix
+% Char: 'U'
+/Pos 19 def
+[0 4] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 44 44 44 44 44> def printDotMatrix
+% Char: 'S'
+/Pos 20 def
+[0 2] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 08 10 20 44 38> def printDotMatrix
+% Char: 'T'
+/Pos 21 def
+[0 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 10 10 7C> def printDotMatrix
+% Char: ' '
+/Pos 22 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'T'
+/Pos 23 def
+[0 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 10 10 7C> def printDotMatrix
+% Char: 'R'
+/Pos 24 def
+[11 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 48 50 78 44 44 78> def printDotMatrix
+% Char: 'Y'
+/Pos 25 def
+[0 8] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 28 44 44> def printDotMatrix
+% Char: ' '
+/Pos 26 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'I'
+/Pos 27 def
+[12 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 10 10 10 10 10 38> def printDotMatrix
+% Char: 'T'
+/Pos 28 def
+[0 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 10 10 7C> def printDotMatrix
+% Char: ' '
+/Pos 29 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+% Char: 'Y'
+/Pos 30 def
+[0 8] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 10 10 10 10 28 44 44> def printDotMatrix
+% Char: 'O'
+/Pos 31 def
+[11 6] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 44 44 44 44 44 7C> def printDotMatrix
+% Char: 'U'
+/Pos 32 def
+[0 4] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 44 44 44 44 44> def printDotMatrix
+% Char: 'R'
+/Pos 33 def
+[11 9] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 44 48 50 78 44 44 78> def printDotMatrix
+% Char: 'S'
+/Pos 34 def
+[0 2] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 38 44 08 10 20 44 38> def printDotMatrix
+% Char: 'E'
+/Pos 35 def
+[12 5] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 78 40 40 7C> def printDotMatrix
+% Char: 'L'
+/Pos 36 def
+[11 3] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 7C 40 40 40 40 40 40> def printDotMatrix
+% Char: 'F'
+/Pos 37 def
+[12 6] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 40 40 40 78 40 40 7C> def printDotMatrix
+showpage

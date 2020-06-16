@@ -1,0 +1,146 @@
+%!PS-Adobe-2.0 EPSF-1.2
+%%Title: PunchedCard (../Fotos/PunchedCard_Example_Image_Heart_DocOutput.eps)
+%%Creator: punchcard.sh (https://github.com/chkummer/PunchedCard)
+%%CreationDate: 16-Jun-2020
+%%BoundingBox: 0 0 541 244
+%%EndComments
+
+%%BeginProcSet
+% Outline of a punched card where the upper left corner was cut
+/cardOutline
+ { newpath
+   0 0 0 setrgbcolor
+   0.25 setlinewidth
+   18 0 moveto
+   495 0 rlineto
+   513 18 18 270 360 arc
+   0 198 rlineto
+   513 216 18 0 90 arc
+   -495  0 rlineto
+   -18 -31.176 rlineto
+   0 -184.824 rlineto
+   18 18 18 180 270 arc
+   closepath
+   stroke } def
+/Pos 0 def
+/Hole 0 def
+
+/hole
+ { newpath moveto
+   0 0 0 setrgbcolor
+   0.25 setlinewidth
+   -1.98 -4.5 rmoveto
+   3.96 0 rlineto
+   0 9 rlineto
+   -3.96 0 rlineto
+   0 -9 rlineto
+   closepath
+   gsave fill grestore } def
+
+/punchHole
+ { /XPos Pos 6.264 mul 11.808 add def
+   XPos [180 162 144 126 108 90 72 54 36 18 0 198 216] Hole get hole } def
+
+/printLayout
+   {
+   } def
+
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def
+
+/printDotMatrix
+ { newpath
+   /XPos Pos 6.264 mul 9 add def
+   0.5 0.5 0.5 setrgbcolor
+   gsave
+   XPos 225 translate
+   6 6 scale
+   8 8 true
+   [8 0 0 8 0 0] { DotMatrixPattern } imagemask
+   grestore } bind def
+
+
+%%EndProcSet
+
+%%Page: 1
+0.5 setlinewidth
+1 1 1 setrgbcolor
+newpath
+0 0 moveto
+541 0 lineto
+541 244 lineto
+0 244 lineto
+closepath stroke
+%%Card: 1
+5 5 translate
+cardOutline
+printLayout
+% Image-Input-Line: ''
+/Pos 22 def
+[1 2] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 23 def
+[0 3] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 25 def
+[4 11] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 27 def
+[5 11] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 30 def
+[6 12] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 32 def
+[12] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 33 def
+[7] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 34 def
+[11] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 36 def
+[11] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 37 def
+[8] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 38 def
+[0] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 40 def
+[9 1] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 42 def
+[0] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 43 def
+[8] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 44 def
+[11] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 46 def
+[11] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 47 def
+[7] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 48 def
+[12] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 50 def
+[6 12] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 53 def
+[5 11] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 55 def
+[4 11] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 57 def
+[0 3] { /Hole exch def punchHole } forall
+% Image-Input-Line: ''
+/Pos 58 def
+[1 2] { /Hole exch def punchHole } forall
+showpage
