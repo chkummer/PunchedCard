@@ -41,7 +41,7 @@ options are:
 
 host:user$
 ```
-See the currently implemented [card types](CardTypes.md), [card corners](CardCorners.md) and [card codes](CardCodes.md). You may use 'A4', 'Letter' or 'Legal' as page size.
+See the currently implemented [card types](CardTypes.md), [card corners](CardCorners.md),  [card codes](CardCodes.md) and [image input format](ImageInputFormat.md). You may use 'A4', 'Letter' or 'Legal' as page size.
 
 #### Examples
 Here are some examples:
