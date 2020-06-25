@@ -9,6 +9,9 @@
 
 ![Dimensions converted into Postscript Points](Fotos/PunchedCard_Dimensions_pspt_144dpi.png)
 
+## Layout of punching positions
+![Layout of punching positions](Fotos/PunchedCard_Layout_144dpi.png)
+
 ## Standards:
 * ANSI INCITS 21-1967 (R2002): Rectangular Holes in Twelve-Row Punched
 * ISO 1681:1973(en): Information processing - Unpunched paper cards - Specification
