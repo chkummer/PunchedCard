@@ -5,9 +5,19 @@
 * PDF: [Card Equipment Summary (Aug-1957)](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Training/Card_Equipment_Summary_Aug57.pdf)
 * PDF: [Machine Functions (Mar-1961)](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Training/224-8208-3_Machine_Functions_Mar61.pdf)
 * German Wikipedia-Article: [Lochkarte](https://de.wikipedia.org/wiki/Lochkarte)
-* Video: [Punch Card Programming - Computerphile](https://www.youtube.com/watch?v=KG2M4ttzBnY)
-* Video: [Computer Punch Cards Historical Overview - IBM Remington Rand UNIVAC - History Archives, # CH-0093](https://www.youtube.com/watch?v=kKJxzay85Vk)
-* Video: [PeriscopeFilm - PUNCHED CARD DATA PROCESSING INTRODUCTION IBM 029 COMPUTER 62454](https://www.youtube.com/watch?v=etu-cH-nkIA)
+
+## Videos
+* [Herman Hollerith Punch Card Machine](https://www.youtube.com/watch?v=GoUK2_vXqQk)
+* [IBM: Once Upon A Punched Card (1964) Vintage computin](https://www.youtube.com/watch?v=BlUWg2nxCz0)
+* [Punch Card Programming - Computerphile](https://www.youtube.com/watch?v=KG2M4ttzBnY)
+* [Computer Punch Cards Historical Overview - IBM Remington Rand UNIVAC - History Archives, # CH-0093](https://www.youtube.com/watch?v=kKJxzay85Vk)
+* [PeriscopeFilm - PUNCHED CARD DATA PROCESSING INTRODUCTION IBM 029 COMPUTER 62454](https://www.youtube.com/watch?v=etu-cH-nkIA)
+* [Bubbles Whiting - Using Punch Cards - Hollerith and IBM](https://www.youtube.com/watch?v=L7jAOcc9kBU)
+* [Early IBM Data Punch Card System](https://www.youtube.com/watch?v=HBFhho6Rrj0)
+* [demo of original IBM keypunch machine](https://www.youtube.com/watch?v=aYxOZmyh74g)
+* [PUNCH CARD COMPUTER DATA PROCESSING OVERVIEW IBM 029 KEY PUNCH MACHINE 65014](https://www.youtube.com/watch?v=3fVRGQT1CoM)
+* [1964 IBM 029 Keypunch Card Punching Demonstration](https://www.youtube.com/watch?v=YnnGbcM-H8c)
+* [IBM 029 Card Punch Restauration (Playlist)](https://www.youtube.com/watch?v=Ey0FOmqONys&list=PL-_93BVApb59yIG2RELONEYOzJ3lMXsqV)
 
 ## Punched Cards
 * [Jim Scott's 'A Collection Of Punched Cards](http://www.jkmscott.net/data/Punched%20Cards.html)
@@ -44,23 +54,6 @@
 * PDF: [Field Engineering Maintenance Manual IBM 24 - Base Machines](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/225-6535-5_24-Base_Machines_FEMM_Dec65.pdf)
 * PDF: [24 Card Punch 26 Printing Card Punch Parts Catalog](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/123-7091-3_24_25_Parts_Catalog_Apr1963.pdf) on Page 21 Print Unit Asm Code Plate
 
-### Code Plates
-See: [Reference Manual IBM 24 Card Punch and IBM 26 Printing Card Punch](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/A24-0520-3_24_26_Card_Punch_Reference_Manual_Oct1965.pdf) Page 28 Special-Character Arrangements and Figure 23 and [IBM Customer Engineering Manual of Instruction Card Punch Type 24 and Printing Card Punch Type 26](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/22-8319-0_24_26_Customer_Engineering_Preliminary_Manual_of_Instruction_1950.pdf) on Pages 74-76 Code Plate
-
-Taken from  [24 Card Punch 26 Printing Card Punch Parts Catalog](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/024-026/123-7091-3_24_25_Parts_Catalog_Apr1963.pdf) on Page 21 Print Unit Asm Code Plate
-
-| Part No | Option | 12 | 11 | 0-1 | 8-3 | 12-8-3 | 11-8-3 | 0-8-3 | 8-4 | 12-8-4 | 11-8-4 | 0-8-4 |
-|--------:|:------:|:--:|:--:|:---:|:---:|:------:|:------:|:-----:|:---:|:------:|:------:|:-----:|
-|  312047 |   A    | &  |  - |  /  |  #  |   .    |    $   |   ,   |  @  |   ¤    |   *    |   %   |
-|  313334 |   B    | /  |  - |  &  |  #  |   .    |    $   |   ,   |  @  |   ¤    |   *    |   %   |
-|  313335 |   C    | &  |  - |  0  |  #  |   .    |    $   |   ,   |  @  |   ¤    |   *    |   %   |
-|  313336 |   D    | -  |  - |  /  |  #  |   .    |    $   |   ,   |  @  |   ¤    |   *    |   %   |
-|  340949 |   E    | -  |  / |  &  |  #  |   .    |   ???  |   ,   |  >  |   <    |   *    |   %   |
-|  340950 |   G    | +  |  - |  /  |  +  |   .    |    $   |   ,   |  -  |   ¤    |   *    |   %   |
-|  341097 |   F    | +  |  - |  /  |  =  |   .    |    $   |   ,   |  -  |   )    |   *    |   (   |
-|  362277 |   H    | +  |  - |  /  |  =  |   .    |    $   |   ,   |  '  |   )    |   *    |   (   |
-|  362276 |   A    | &  |  - |  /  |  #  |   .    |    $   |   ,   |  @  |   ¤    |   *    |   %   |
-
 ### IBM 029
 * [colubia.edu: The IBM 029 Key Punch](http://www.columbia.edu/cu/computinghistory/029.html)
 * PDF: [Reference Manual IBM 29 Card Punch](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/029/A24-3332-3_29_Reference_Man.pdf)
@@ -75,25 +68,6 @@ Taken from  [24 Card Punch 26 Printing Card Punch Parts Catalog](http://bitsaver
 * [Keypunch029 — for all your punched card font needs ...](https://scruss.com/blog/2017/03/21/keypunch029-for-all-your-punched-card-font-needs/)
 * Video: [1964 IBM 029 Keypunch Card Punching Demonstration](https://www.youtube.com/watch?v=YnnGbcM-H8c)
 
-### Code Plates
-See [IBM029 Field Engineering Maintenance Manual](http://www.ed-thelen.org/comp-hist/IBM029-Field-Eng-Maint-Man-r.pdf) Page 56-64 Print Unit Figure 4-39 Overlay for Figure 4-40, Figure 4-40 Code Plate Chart E'L', Figure 4-46 Character Patterns E'L', Figure 4-47 Character Patterns E'A' and [Reference Manual IBM 29 Card Punch](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/029/A24-3332-3_29_Reference_Man.pdf) Page 38 Printing / Character Arrangements and Page 42 Figure 29 Key Graphics and Punched-Hole Codes
-Taken from [IBM029 Card Punch Illustrated Parts Catalog](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/029/S124-0085-5_29_Parts_Man_Dec68.pdf) Page 117-120
-
-| Part No | Description                            |
-|--------:|----------------------------------------|
-| 5372327 | Plate-Printing Code E A                |
-| 5372328 | Plate-Printing Code E B                |
-| 5372329 | Plate-Printing Code E C                |
-| 5372330 | Plate-Printing Code E D                |
-| 5372331 | Plate-Printing Code E E                |
-| 5372332 | Plate-Printing Code E F                |
-| 5372333 | Plate-Printing Code E G                |
-| 5372334 | Plate-Printing Code E H                |
-| 5372335 | Plate-Printing Code E J                |
-| 5372336 | Plate-Printing Code E K                |
-| 5372337 | Plate-Printing Code E L                |
-| 5404164 | Code Plate used with Spanish N Feature |
-
 
 ### IBM 129
 * PDF: [Machine Description IBM 129 Card Data Recorder](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/129/GA22-6980-1_129_Card_Data_Recorder_Machine_Description_Apr71.pdf)
@@ -102,23 +76,9 @@ Taken from [IBM029 Card Punch Illustrated Parts Catalog](http://bitsavers.inform
 * PDF: [Parts Catalog IBM 129 Card Data Recorder Models 1-3](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/129/S123-1055-5_129_Parts_Catalog_Dec73.pdf)
 * PDF: [Drawings](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/129/129_ALD.pdf)
 
-### Code Plates
-Taken from [Parts Catalog IBM 129 Card Data Recorder Models 1-3](http://bitsavers.informatik.uni-stuttgart.de/pdf/ibm/punchedCard/Keypunch/129/S123-1055-5_129_Parts_Catalog_Dec73.pdf) Page 87-88
 
-| Part No | Description                               |
-|--------:|-------------------------------------------|
-|  963307 | Code Plate-Katakana                       |
-| 5372334 | Code Plate, H Character Set               |
-| 5372337 | Code Plate, USA/Italy/Ger/Spain/Latin Am. |
-| 5480436 | Code Plate, ASCII                         |
-| 8107850 | Code Plate, Finland/Sweden                |
-| 8107939 | Code Plate, Denmark/Norway                |
-| 8109173 | Code Plate, U.K. English                  |
-| 8109283 | Code Plate, French(FRANC)/Belgium         |
-| 8110399 | Code Plate, Portugal                      |
-| 8112110 | Code Plate, Brazil                        |
-
-
+## Books
+* [Print Punch](https://centrecentre.co.uk/collections/frontpage/products/print-punch-artefacts-from-the-punch-card-era) Artefacts from the punch card era
 ## Other Punch Card Services and Software:
 * [Cardpunch: punch a punched card](http://www.kloth.net/services/cardpunch.php)
 * [punch-card encoding ported to Processing](https://github.com/jeffThompson/PunchCardEncoding)
