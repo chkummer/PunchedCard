@@ -19,6 +19,43 @@ cat <<=EPS_HEADER_EOF=
 }
 
 #
+# EPS_CROSS_HAIR
+#
+EPS_CROSS_HAIR () {
+cat <<=EPS_CROSS_HAIR_EOF=
+${ALIGN_LINE_COLOR} setrgbcolor
+newpath
+0 ${OUT_PAGE_HEIGHT} moveto
+30 -20 rmoveto
+0 -20 rlineto
+0 10 rmoveto
+-10 0 rmoveto
+20 0 rlineto
+closepath stroke
+newpath
+${OUT_PAGE_WIDTH} 0 moveto
+-20 30 rmoveto
+-20 0 rlineto
+10 0 rmoveto
+0 -10 rmoveto
+0 20 rlineto
+closepath stroke
+=EPS_CROSS_HAIR_EOF=
+}
+#
+# EPS_L_SHAPE
+#
+EPS_L_SHAPE () {
+cat <<=EPS_L_SHAPE_EOF=
+${ALIGN_LINE_COLOR} setrgbcolor
+newpath
+30 776 moveto
+551 0 rlineto
+0 -755 rlineto
+stroke
+=EPS_L_SHAPE_EOF=
+}
+#
 # EPS_INIT_PAGE
 #
 EPS_INIT_PAGE () {
@@ -34,6 +71,15 @@ ${OUT_PAGE_WIDTH} ${OUT_PAGE_HEIGHT} lineto
 0 ${OUT_PAGE_HEIGHT} lineto
 closepath stroke
 =EPS_INIT_PAGE_EOF=
+if [ ${DOCU_FLAG} -eq 0 ]
+then
+  case ${ALIGN_TYPE} in
+    'cross')
+      EPS_CROSS_HAIR;;
+    'lshape')
+      EPS_L_SHAPE;;
+  esac
+fi
 }
 
 #

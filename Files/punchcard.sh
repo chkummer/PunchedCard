@@ -11,6 +11,7 @@ CUT_HOLE_COLOR="0 0 1" # blue
 CARD_TEXT_COLOR="0 0 0" # black
 DOC_BORDER_COLOR="0 1 0" # green
 DOT_MATRIX_COLOR="0.5 0.5 0.5" # gray
+ALIGN_LINE_COLOR="1 0 1" # violet
 # default value for the card coding
 CARD_CODE="IBM029"
 # default value for the card type (background printing)
@@ -40,6 +41,8 @@ DOCU_FLAG=0
 INPUT_FORMAT=0
 # get current date for CREATION_DATE
 CREATION_DATE=`date '+%d-%b-%Y'`
+# align type between printer and lasercutter (none, cross or lshape)
+ALIGN_TYPE="none"
 #
 # Shell Functions
 #
@@ -60,6 +63,7 @@ options are:
  -o <outfile>   # output base file name (default: ${BASE_OUTFILE})
  -s             # split output
  -D             # output is for documentation
+ -a <type>      # align type between printer and lasercutter (default: ${ALIGN_TYPE})
  -h             # this help text
 
 =USAGE_EOF=
@@ -170,7 +174,7 @@ fi
 #
 # Main
 #
-while getopts i:I:c:C:t:o:p:DSsh option
+while getopts i:I:c:C:t:o:p:a:DSsh option
 do
     case "${option}" in
         i) INPUT_FILE=${OPTARG};;
@@ -183,6 +187,7 @@ do
         p) OUT_PAGE_SIZE=${OPTARG};;
         s) SPLIT_OUTPUT=1;;
         D) DOCU_FLAG=1;;
+        a) ALIGN_TYPE=${OPTARG};;
         h) USAGE;;
     esac
 done
