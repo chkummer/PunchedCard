@@ -63,7 +63,7 @@ options are:
  -o <outfile>   # output base file name (default: ${BASE_OUTFILE})
  -s             # split output
  -D             # output is for documentation
- -a <type>      # align type between printer and lasercutter (default: ${ALIGN_TYPE})
+ -a <type>      # align type between printer and lasercutter (none, cross or lshape default: ${ALIGN_TYPE})
  -h             # this help text
 
 =USAGE_EOF=
@@ -110,7 +110,7 @@ echo "printLayout" | tee -a ${OUTFILE} ${PRINTER_OUTFILE} >/dev/null
 # PROCESS_TEXT: processing text input file
 #
 PROCESS_TEXT () {
-  cat ${INPUT_FILE} | while read INPUT_LINE || [[ -n ${INPUT_LINE} ]];
+  cat ${INPUT_FILE} | while IFS= read INPUT_LINE || [[ -n ${INPUT_LINE} ]];
   do
       INIT_CARD
       INPUT_LEN=`expr ${#INPUT_LINE} - 1`
