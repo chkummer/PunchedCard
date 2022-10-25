@@ -37,6 +37,7 @@ options are:
  -o <outfile>   # output base file name (default: punchcard)
  -s             # split output
  -D             # output is for documentation
+ -a <type>      # align type between printer and lasercutter (none, cross or lshape default: none)
  -h             # this help text
 
 host:user$
