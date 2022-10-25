@@ -1,0 +1,146 @@
+%!PS-Adobe-2.0 EPSF-1.2
+%%Title: PunchedCard (PunchedCard_EmptySample_CardType_JobCard.eps)
+%%Creator: punchcard.sh (https://github.com/chkummer/PunchedCard)
+%%CreationDate: 25-Okt-2022
+%%BoundingBox: 0 0 541 244
+%%EndComments
+
+%%BeginProcSet
+% Outline of a punched card where no upper corners are cut
+/cardOutline
+ { newpath
+   0 0 0 setrgbcolor
+   0.25 setlinewidth
+   18 0 moveto
+   495 0 rlineto
+   513 18 18 270 360 arc
+   0 198 rlineto
+   513 216 18 0 90 arc
+   -495  0 rlineto
+   18 216 18 90 180 arc
+   0 -198 rlineto
+   18 18 18 180 270 arc
+   closepath
+   stroke } def
+/Pos 0 def
+/Hole 0 def
+
+/hole
+ { newpath moveto
+   0 0 0 setrgbcolor
+   0.25 setlinewidth
+   -1.98 -4.5 rmoveto
+   3.96 0 rlineto
+   0 9 rlineto
+   -3.96 0 rlineto
+   0 -9 rlineto
+   closepath
+   gsave fill grestore } def
+
+/punchHole
+ { /XPos Pos 6.264 mul 11.808 add def
+   XPos [180 162 144 126 108 90 72 54 36 18 0 198 216] Hole get hole } def
+
+/centreshow 
+  { /mystring exch def
+    mystring stringwidth pop -2 div 0 rmoveto 
+    mystring show } def 
+
+/centrecompshow 
+  { /mystring exch def
+    gsave
+    0.7 1 scale
+    mystring stringwidth pop -2 div 0 rmoveto 
+    mystring show
+    grestore
+  } def 
+
+/rightshow
+  { dup stringwidth pop
+    120 exch sub 
+    0 rmoveto
+    show
+  } def
+
+/singleCol
+  { /PosStr 2 string def
+    /XPos Pos 6.264 mul 11.5 add def
+
+    /Helvetica-Narrow findfont
+    4 scalefont setfont
+
+    XPos 8 moveto
+    Pos PosStr cvs centreshow } def
+
+/printLayout
+ { /Pos 1 def
+   0 0 0 setrgbcolor
+   { 
+     Pos singleCol
+     /Pos Pos 1 add def
+     Pos 80 gt
+     { exit } if
+     } loop
+
+   /Helvetica-BoldOblique findfont
+   36 scalefont setfont
+   17.764 155 moveto
+   (Job Card) show
+
+   /Helvetica findfont
+   12 scalefont setfont
+   170 210 moveto (User Name:) rightshow
+   290 208 moveto 200 0 rlineto stroke
+   170 180 moveto (Job Name:) rightshow
+   290 178 moveto 200 0 rlineto stroke
+   170 150 moveto (Cost Unit:) rightshow
+   290 148 moveto 200 0 rlineto stroke
+   170 120 moveto (Turnaround:) rightshow
+   295 119 moveto 10 0 rlineto 0 10 rlineto -10 0 rlineto 0 -10 rlineto closepath stroke
+   310 120 moveto (Prime) show
+   295 99 moveto 10 0 rlineto 0 10 rlineto -10 0 rlineto 0 -10 rlineto closepath stroke
+   310 100 moveto (Overnight) show
+   170 70 moveto (Operator Comment:) rightshow
+   295 69 moveto 10 0 rlineto 0 10 rlineto -10 0 rlineto 0 -10 rlineto closepath stroke
+   310 70 moveto (Job Card Error) show
+   295 49 moveto 10 0 rlineto 0 10 rlineto -10 0 rlineto 0 -10 rlineto closepath stroke
+   310 50 moveto (Invalid Punch) show
+   295 29 moveto 10 0 rlineto 0 10 rlineto -10 0 rlineto 0 -10 rlineto closepath stroke
+   310 28 moveto 180 0 rlineto stroke
+
+   } def
+
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def
+
+/printDotMatrix
+ { newpath
+   /XPos Pos 6.264 mul 9 add def
+   0.5 0.5 0.5 setrgbcolor
+   gsave
+   XPos 225 translate
+   6 6 scale
+   8 8 true
+   [8 0 0 8 0 0] { DotMatrixPattern } imagemask
+   grestore } bind def
+
+
+%%EndProcSet
+
+%%Page: 1
+0.5 setlinewidth
+1 1 1 setrgbcolor
+newpath
+0 0 moveto
+541 0 lineto
+541 244 lineto
+0 244 lineto
+closepath stroke
+%%Card: 1
+5 5 translate
+cardOutline
+printLayout
+% Char: ' '
+/Pos 1 def
+[] { /Hole exch def punchHole } forall
+/DotMatrixPattern <00 00 00 00 00 00 00 00> def printDotMatrix
+showpage

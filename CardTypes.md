@@ -28,3 +28,8 @@
 ## IBMC61897
 
 ![Empty Sample of an IBMC61897 Card Type](Fotos/PunchedCard_EmptySample_CardType_IBMC61897_144dpi.png)
+
+
+## JobCard
+
+![Empty Sample of an JobCard Card Type (not to be punched - use input text file with a 'space')](Fotos/PunchedCard_EmptySample_CardType_JobCard_144dpi.png)
